@@ -138,21 +138,18 @@ class PageRank implements SortInterface
         $this->nodes    = array();
         $total = count($ngrams);
         for($i=0; $i < $total; $i++) {
-            for ($e=$i; $e < $total && $e <= $i+2; $e++) {
+            for ($e=$i; $e < $total && $e <= $i+5; $e++) {
                 $this->addNode($ngrams[$e], $ngrams[$i]);
                 $this->addNode($ngrams[$i], $ngrams[$e]);
             }
         }
 
+        $newvals = $this->nodes;
         do {
             $values  = $this->nodes;
-            $newvals = array(); 
             foreach ($this->graph as $id => $inlinks) {
                 $pr = 0;
                 foreach ($inlinks as $zid) {
-                    if (!array_key_exists($zid, $values)) {
-                        $values[$zid] = 0.15;
-                    }
                     $pr += $values[$zid] / $this->outlinks[$zid];
                 }
                 $pr = (1-$this->damping) * $this->damping * $pr;
