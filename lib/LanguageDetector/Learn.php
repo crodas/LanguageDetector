@@ -70,8 +70,6 @@ class Learn
             throw new \Exception("You need to provide samples");
         }
 
-        ini_set('memory_limit', '1G');
-
         $data     = array();
         $sort     = $this->config->getSortObject();
         $max      = $this->config->maxNGram();

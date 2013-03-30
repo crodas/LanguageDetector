@@ -2,6 +2,8 @@
 
 require __DIR__ . '/../lib/LanguageDetector/autoload.php';
 
+ini_set('memory_limit', '1G');
+
 $config = new LanguageDetector\Config;
 
 $c = new LanguageDetector\Learn($config);
