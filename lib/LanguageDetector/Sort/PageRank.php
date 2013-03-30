@@ -138,7 +138,8 @@ class PageRank implements SortInterface
         $this->nodes    = array();
         $total = count($ngrams);
         for($i=0; $i < $total; $i++) {
-            for ($e=$i; $e < $total && $e < $i+5; $e++) {
+            for ($e=$i; $e < $total && $e <= $i+2; $e++) {
+                $this->addNode($ngrams[$e], $ngrams[$i]);
                 $this->addNode($ngrams[$i], $ngrams[$e]);
             }
         }

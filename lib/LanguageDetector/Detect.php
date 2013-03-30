@@ -58,9 +58,9 @@ class Detect
         $this->distance = $this->config->GetDistanceObject();
     }
 
-    public function detect($text, $limit = 150)
+    public function detect($text, $limit = 200)
     {
-        $ngrams = $this->sort->sort($this->parser->get($text));
+        $ngrams = $this->sort->sort($this->parser->get($text, $limit));
         $total  = min($this->config->maxNGram(), count($ngrams));
         foreach ($this->data as $lang => $data) {
             $distance[$lang] = 1-($this->distance->distance($data, $ngrams) / (count($data) * $total));
