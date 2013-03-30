@@ -49,13 +49,16 @@ class NGramParser
         $this->mb  = $mb;
     }
 
-    public function get($text)
+    public function get($text, $limit = -1)
     {
         $strtolower = $this->mb ? 'mb_strtolower' : 'strtolower';
         $strlen     = $this->mb ? 'mb_strlen' : 'strlen';
         $substr     = $this->mb ? 'mb_substr' : 'substr'; 
 
         $text   = preg_replace('/[ \t\r\n]+/', ' ', $strtolower($text));
+        if ($limit > 0) {
+            $text = $substr($text, 0, $limit);
+        }
         $len    = $strlen($text);
         $min    = $this->min;
         $max    = $this->max;

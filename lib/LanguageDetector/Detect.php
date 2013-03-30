@@ -58,10 +58,8 @@ class Detect
         $this->distance = $this->config->GetDistanceObject();
     }
 
-    public function detect($text)
+    public function detect($text, $limit = 150)
     {
-        $substr = $this->config->mb() ? 'mb_substr' : 'substr';
-        $text   = $substr(preg_replace('/[ \t\r\n]+/', ' ', $text), 0, 200);
         $ngrams = $this->sort->sort($this->parser->get($text));
         $total  = min($this->config->maxNGram(), count($ngrams));
         foreach ($this->data as $lang => $data) {
