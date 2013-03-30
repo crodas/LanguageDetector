@@ -63,11 +63,23 @@ class Detect
         $ngrams = $this->sort->sort($this->parser->get($text, $limit));
         $total  = min($this->config->maxNGram(), count($ngrams));
         foreach ($this->data as $lang => $data) {
-            $distance[$lang] = 1-($this->distance->distance($data, $ngrams) / (count($data) * $total));
+            $distance[] = array(
+                'lang'  => $lang, 
+                'score' => 1-($this->distance->distance($data, $ngrams) / (count($data) * $total)),
+            );
         }
 
-        arsort($distance);
-        return key($distance);
+        usort($distance, function($a, $b) {
+            return $a['score'] > $b['score'] ? -1 : 1; 
+        });
+
+        if ($distance[0]['score'] - $distance[1]['score'] <= 0.02) {
+            /** First and second language candidates are similar, strip the first 200
+              letters and re-run the test */
+            return $this->detect(substr($text, 200), $limit);
+        }
+
+        return $distance[0]['lang'];
     }
 
 }
