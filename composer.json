@@ -1,0 +1,18 @@
+{
+    "name": "crodas/LanguageDetector",
+    "description": "simple library to classify texts",
+    "authors": [
+        {
+            "name": "César D. Rodas",
+            "email": "crodas@php.net"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-0": {
+            "LanguageDetector": "lib/"
+        }
+    }
+}
