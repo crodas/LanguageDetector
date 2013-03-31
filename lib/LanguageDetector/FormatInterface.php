@@ -36,42 +36,6 @@
 */
 namespace LanguageDetector;
 
-class Config
+interface FormatInterface
 {
-    protected $minLenNGram = 2;
-    protected $maxLenNGram = 4;
-    protected $maxNGram    = 300;
-    protected $sort        = 'LanguageDetector\\Sort\\PageRank';
-    protected $distance    = 'LanguageDetector\\Distance\\OutOfPlace';
-    protected $serializer  = 'LanguageDetector\\Format\\';
-    protected $mb          = false;
-    
-    public function __call($name, $args)
-    {
-        return $this->$name;
-    }
-
-    public function getSortObject()
-    {
-        return new $this->sort;
-    } 
-
-    public function getParser()
-    {
-        return new NGramParser($this->minLenNGram, $this->maxLenNGram, $this->mb);
-    }
-
-    public function getDistanceObject()
-    {
-        return new $this->distance;
-    }
-
-    public static function  __set_state(Array $state)
-    {
-        $obj = new self;
-        foreach ($state as $k => $v) {
-            $obj->$k = $v;
-        }
-        return $obj;
-    }
 }

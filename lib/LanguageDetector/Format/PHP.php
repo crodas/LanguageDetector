@@ -36,7 +36,9 @@
 */
 namespace LanguageDetector\Format;
 
-class PHP
+use LanguageDetector\FormatInterface;
+
+class PHP implements FormatInterface
 {
     public $loadByPath = true;
 

@@ -65,7 +65,7 @@ class Detect
         foreach ($this->data as $lang => $data) {
             $distance[] = array(
                 'lang'  => $lang, 
-                'score' => 1-($this->distance->distance($data, $ngrams) / (count($data) * $total)),
+                'score' => $this->distance->distance($data, $ngrams, $total),
             );
         }
 

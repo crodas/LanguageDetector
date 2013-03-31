@@ -45,7 +45,13 @@ class Format
     {
         $ext   = explode(".", $path);
         $class = __NAMESPACE__ . '\\Format\\' . strtoupper(end($ext));
+        if (!class_exists($class)) {
+            throw new \RuntimeException("cannot find class $class");
+        }
         $this->object = new $class;
+        if (!$this->object instanceof FormatInterface) {
+            throw new \RuntimeException("{$class} must implment " . __NAMESPACE__ . "\\FormatInterface interface");
+        }
         $this->path   = $path;
     }
 

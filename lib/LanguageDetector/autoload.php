@@ -19,6 +19,7 @@ spl_autoload_register(function ($class) {
   'languagedetector\\format' => '//Format.php',
   'languagedetector\\learn' => '//Learn.php',
   'languagedetector\\sort\\pagerank' => '/Sort/PageRank.php',
+  'languagedetector\\formatinterface' => '//FormatInterface.php',
   'languagedetector\\detect' => '//Detect.php',
   'languagedetector\\config' => '//Config.php',
   'languagedetector\\format\\php' => '/Format/PHP.php',

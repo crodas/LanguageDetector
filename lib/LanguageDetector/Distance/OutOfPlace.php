@@ -40,7 +40,7 @@ use LanguageDetector\DistanceInterface;
 
 class OutOfPlace implements DistanceInterface
 {
-    public function distance(Array $sample, Array $ngrams)
+    public function distance(Array $sample, Array $ngrams, $total)
     {
         $score   = 0;
         $penalty = count($sample)+1;
@@ -54,6 +54,6 @@ class OutOfPlace implements DistanceInterface
             $score += abs($pos - $sample[$ngram]['pos']);
             $pos++;
         }
-        return $score;
+        return 1 - ($score / (($penalty-1) * $total));
     }
 }
