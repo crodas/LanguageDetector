@@ -50,9 +50,14 @@ require 'lib/LanguageDetector/autoload.php';
 // the $config object for us.
 $detect = new LanguageDetector\Detect('language.php');
 
-$lang = $detect->detect("Agricultura (-ae, f.), sensu latissimo, est summa omnium artium et scientiarum et technologiarum quae de terris colendis et animalibus creandis curant, ut poma, frumenta, charas, carnes, textilia, et aliae res e terra bene producantur. Specialius, agronomia est ars et scientia quae terris colendis student, agricultio autem animalibus creandis.")
+$lang = $detect->detect("Agricultura (-ae, f.), sensu latissimo, 
+est summa omnium artium et scientiarum et technologiarum quae de 
+terris colendis et animalibus creandis curant, ut poma, frumenta, 
+charas, carnes, textilia, et aliae res e terra bene producantur. 
+Specialius, agronomia est ars et scientia quae terris colendis student, 
+agricultio autem animalibus creandis.")
 
-var_dump($lang).
+var_dump($lang);
 ```
 
 And that's it.
