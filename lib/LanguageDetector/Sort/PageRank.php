@@ -41,33 +41,7 @@ use LanguageDetector\SortInterface;
 class PageRank implements SortInterface
 {
     protected $damping = 0.85;
-    protected $convergence = 0.001;
-    protected $outlinks = array();
-    protected $graph    = array();
-    protected $nodes    = array();
-
-    // addNode {{{
-    protected function addNode($source, $dest)
-    {
-        if ($source === $dest) {
-            return false;
-        }
-        if (empty($this->outlinks[$source])) {
-            $this->outlinks[$source] = 0;
-        }
-        if (empty($this->graph[$dest])) {
-            $this->graph[$dest] = array();
-        }
-
-        $this->graph[$dest][] = $source;
-        $this->outlinks[$source]++;
-
-        $this->nodes[$source] = 0.15;
-        $this->nodes[$dest]   = 0.15;
-
-        return true;
-    }
-    // }}}
+    protected $convergence = 0.01;
 
     // subs(array $a, array $b) {{{
     /**
@@ -120,12 +94,11 @@ class PageRank implements SortInterface
     // }}}
 
     // hasCoverge {{{
-    protected function hasConverge(Array $newValues)
+    protected function hasConverge(Array $old, Array $newValues)
     {
         $total = count($newValues);
-        $diff  = $this->subs($newValues, $this->nodes);
+        $diff  = $this->subs($newValues, $old);
         $done  = (sqrt($this->mult($diff, $diff))/$total) < $this->convergence;
-        $this->nodes = $newValues;
 
         return $done;
     }
@@ -133,29 +106,48 @@ class PageRank implements SortInterface
 
     public function sort(Array $ngrams)
     {
-        $this->outlinks = array();
-        $this->graph    = array();
-        $this->nodes    = array();
+        $outlinks = array();
+        $graph    = array();
+        $values   = array();
         $total = count($ngrams);
         for($i=0; $i < $total; $i++) {
             for ($e=$i; $e < $total && $e <= $i+5; $e++) {
-                $this->addNode($ngrams[$e], $ngrams[$i]);
-                $this->addNode($ngrams[$i], $ngrams[$e]);
+                if ($ngrams[$e] == $ngrams[$i]) continue;
+
+                foreach (array($i, $e) as $id) {
+                    if (empty($outlinks[ $ngrams[$id] ])) {
+                        $outlinks[ $ngrams[$id] ] = 0;
+                    }
+                    if (empty($graph[ $ngrams[$id] ])) {
+                        $graph[ $ngrams[$id] ] = array();
+                    }
+
+                    $outlinks[ $ngrams[$id] ]++; /* increment outlink counter */
+                    $values[ $ngrams[$id] ] = 0.15; /* initial value */
+                }
+
+                $graph[ $ngrams[$e] ][] = $ngrams[$i];
+                $graph[ $ngrams[$i] ][] = $ngrams[$e];
             }
         }
 
-        $newvals = $this->nodes;
+        $damping = $this->damping;
+        $newvals = array();
         do {
-            $values  = $this->nodes;
-            foreach ($this->graph as $id => $inlinks) {
+            foreach ($graph as $id => $inlinks) {
                 $pr = 0;
                 foreach ($inlinks as $zid) {
-                    $pr += $values[$zid] / $this->outlinks[$zid];
+                    $pr += $values[$zid] / $outlinks[$zid];
                 }
-                $pr = (1-$this->damping) * $this->damping * $pr;
+                $pr = (1-$damping) * $damping * $pr;
                 $newvals[$id] = $pr;
             }
-        } while(!$this->hasConverge($newvals));
+            if ($this->hasConverge($values, $newvals)) {
+                break;
+            }
+            /* update values array */
+            $values = $newvals;
+        } while(true);
 
         arsort($newvals);
 

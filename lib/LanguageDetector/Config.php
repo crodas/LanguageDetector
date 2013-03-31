@@ -43,7 +43,6 @@ class Config
     protected $maxNGram    = 300;
     protected $sort        = 'LanguageDetector\\Sort\\PageRank';
     protected $distance    = 'LanguageDetector\\Distance\\OutOfPlace';
-    protected $serializer  = 'LanguageDetector\\Format\\';
     protected $mb          = false;
     
     public function __call($name, $args)
