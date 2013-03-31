@@ -42,6 +42,7 @@ class Detect
     protected $data;
     protected $parser;
     protected $sort;
+    protected $threshold = .018;
 
     public function __construct($datafile)
     {
@@ -58,9 +59,9 @@ class Detect
         $this->distance = $this->config->GetDistanceObject();
     }
 
-    public function detect($text, $limit = 200)
+    protected function detectChunk($text)
     {
-        $ngrams = $this->sort->sort($this->parser->get($text, $limit));
+        $ngrams = $this->sort->sort($this->parser->get($text));
         $total  = min($this->config->maxNGram(), count($ngrams));
         foreach ($this->data as $lang => $data) {
             $distance[] = array(
@@ -73,12 +74,57 @@ class Detect
             return $a['score'] > $b['score'] ? -1 : 1; 
         });
 
-        if ($distance[0]['score'] - $distance[1]['score'] <= 0.02) {
-            /** First and second language candidates are similar, strip the first 200
-              letters and re-run the test */
-            return $this->detect(substr($text, 200), $limit);
+        if ($distance[0]['score'] - $distance[1]['score'] <= $this->threshold) {
+            /** First and second language candidates are similar, we return the
+                whole structure */
+            return $distance;
         }
 
+        /* we found a candiate which is at least 2% better than the second
+           candiate */
+        return $distance[0]['lang'];
+    }
+
+    public function detect($text, $limit = 200)
+    {
+        $chunks = $this->parser->splitText($text, $limit);
+        $results = array();
+
+        foreach ($chunks as $chunk) {
+            $result = $this->detectChunk($chunk);
+            if (is_string($result)) {
+                /* we successfully detected the chunk's language */
+                return $result;
+            }
+            $results[] = $result;
+        }
+
+        $distance = array();
+        foreach ($results as $result) {
+            foreach ($result as $data) {
+                if (empty($distance[ $data['lang'] ])) {
+                    $distance[ $data['lang'] ] = array('lang' => $data['lang'], 'score' => 0);
+                }
+                $distance[ $data['lang'] ]['score'] += $data['score'];
+            }
+        }
+
+        $distance = array_map(function($v) use ($results) {
+            $v['score'] /= count($results);
+            return $v;
+        }, $distance);
+
+        $distance = array_values($distance);
+
+        usort($distance, function($a, $b) {
+            return $a['score'] > $b['score'] ? -1 : 1; 
+        });
+
+        if ($distance[0]['score'] - $distance[1]['score'] <= $this->threshold) {
+            /** We're not sure at all, we return the whole array then */
+            return $distance;
+        }
+        
         return $distance[0]['lang'];
     }
 

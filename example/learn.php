@@ -13,4 +13,4 @@ foreach (glob(__DIR__ . '/samples/*') as $file) {
 $c->addStepCallback(function($lang, $status) {
     echo "Learning {$lang}: $status\n";
 });
-$c->save('datafile.php');
+$c->save(__DIR__ . '/datafile.php');

@@ -41,6 +41,7 @@ class NGramParser
     protected $min;
     protected $max;
     protected $mb;
+    protected $regex = '/[ \r\n\t_\.\-0-9]+/';
 
     public function __construct($min=2, $max=4, $mb = true)
     {
@@ -49,13 +50,21 @@ class NGramParser
         $this->mb  = $mb;
     }
 
-    public function get($text, $limit = -1)
+    public function splitText($text, $len=200)
+    {
+        $strtolower = $this->mb ? 'mb_strtolower' : 'strtolower';
+        $text = preg_replace($this->regex, '_', $strtolower($text));
+        return preg_split("/(.{{$len}})/u", $text,  0, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
+    }
+
+    public function get($raw_text, $limit = -1)
     {
         $strtolower = $this->mb ? 'mb_strtolower' : 'strtolower';
         $strlen     = $this->mb ? 'mb_strlen' : 'strlen';
         $substr     = $this->mb ? 'mb_substr' : 'substr'; 
 
-        $text   = preg_replace('/[ \t\r\n]+/', ' ', $strtolower($text));
+        $text = preg_replace($this->regex, '_', $strtolower($raw_text));
+
         if ($limit > 0) {
             $text = $substr($text, 0, $limit);
         }

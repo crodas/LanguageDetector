@@ -40,7 +40,7 @@ class Config
 {
     protected $minLenNGram = 2;
     protected $maxLenNGram = 4;
-    protected $maxNGram    = 300;
+    protected $maxNGram    = 400;
     protected $sort        = 'LanguageDetector\\Sort\\PageRank';
     protected $distance    = 'LanguageDetector\\Distance\\OutOfPlace';
     protected $mb          = false;
