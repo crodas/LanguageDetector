@@ -41,6 +41,7 @@ class Learn
     protected $samples = array();
     protected $callback;
     protected $config;
+    protected $output = array();
 
     public function __construct(Config $config)
     {
@@ -62,6 +63,7 @@ class Learn
             $this->samples[$label] = array();
         }
         $this->samples[$label][] = $text;
+        $this->output[$label]    = array();
     }
 
     public function save($output)
@@ -70,26 +72,30 @@ class Learn
             throw new \Exception("You need to provide samples");
         }
 
-        $data     = array();
         $sort     = $this->config->getSortObject();
         $max      = $this->config->maxNGram();
         $parser   = $this->config->getParser();
         $callback = $this->callback;
         foreach ($this->samples as $lang => $texts) {
+            if (!empty($this->output[$lang])) {
+                continue;
+            }
             if ($callback) {
                 $callback($lang, 'start');
             }
             $text = implode("\n", $texts);
             $pos  = 0;
+            $data = array();
             foreach (array_splice($sort->sort($parser->get($text)), 0, $max) as $ngram => $score) {
-                $data[$lang][$ngram] = array('pos' => $pos++, 'score' => $score);
+                $data[$ngram] = array('pos' => $pos++, 'score' => $score);
             }
+            $this->output[$lang] = $data;
             if ($callback) {
                 $callback($lang, 'end');
             }
         }
 
         $format = new Format($output);
-        $format->dump(array('config' => $this->config, 'data' => $data));
+        $format->dump(array('config' => $this->config, 'data' => $this->output));
     }
 }

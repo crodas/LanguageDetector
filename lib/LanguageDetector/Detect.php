@@ -42,7 +42,7 @@ class Detect
     protected $data;
     protected $parser;
     protected $sort;
-    protected $threshold = .018;
+    protected $threshold = .02;
 
     public function __construct($datafile)
     {
@@ -85,12 +85,12 @@ class Detect
         return $distance[0]['lang'];
     }
 
-    public function detect($text, $limit = 200)
+    public function detect($text, $limit = 300)
     {
         $chunks = $this->parser->splitText($text, $limit);
         $results = array();
 
-        foreach ($chunks as $chunk) {
+        foreach ($chunks as $i => $chunk) {
             $result = $this->detectChunk($chunk);
             if (is_string($result)) {
                 /* we successfully detected the chunk's language */
@@ -99,8 +99,13 @@ class Detect
             $results[] = $result;
         }
 
-        $distance = array();
+        $candidates = array();
+        $distance   = array();
         foreach ($results as $result) {
+            if (is_string($result)) {
+                $candidates[] = $result;
+                continue;
+            }
             foreach ($result as $data) {
                 if (empty($distance[ $data['lang'] ])) {
                     $distance[ $data['lang'] ] = array('lang' => $data['lang'], 'score' => 0);
@@ -108,6 +113,16 @@ class Detect
                 $distance[ $data['lang'] ]['score'] += $data['score'];
             }
         }
+
+        if (count($candidates) > 0) {
+            $candidates = array_count_values($candidates);
+            arsort($candidates);
+            if (current($candidates) != array_sum(array_splice($candidates, 0,2))/2) {
+                /* the first *is* more than the second */
+                return key($candidates);
+            }
+        }
+
 
         $distance = array_map(function($v) use ($results) {
             $v['score'] /= count($results);

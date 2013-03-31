@@ -14,18 +14,19 @@ spl_autoload_register(function ($class) {
 
     // classes {{{
     static $classes = array (
-  'languagedetector\\sortinterface' => '//SortInterface.php',
-  'languagedetector\\ngramparser' => '//NGramParser.php',
-  'languagedetector\\format' => '//Format.php',
-  'languagedetector\\learn' => '//Learn.php',
+  'languagedetector\\sortinterface' => '/SortInterface.php',
+  'languagedetector\\ngramparser' => '/NGramParser.php',
+  'languagedetector\\format' => '/Format.php',
+  'languagedetector\\learn' => '/Learn.php',
   'languagedetector\\sort\\sum' => '/Sort/Sum.php',
   'languagedetector\\sort\\pagerank' => '/Sort/PageRank.php',
-  'languagedetector\\formatinterface' => '//FormatInterface.php',
-  'languagedetector\\detect' => '//Detect.php',
-  'languagedetector\\config' => '//Config.php',
+  'languagedetector\\formatinterface' => '/FormatInterface.php',
+  'languagedetector\\detect' => '/Detect.php',
+  'languagedetector\\config' => '/Config.php',
+  'languagedetector\\format\\json' => '/Format/JSON.php',
   'languagedetector\\format\\php' => '/Format/PHP.php',
   'languagedetector\\distance\\outofplace' => '/Distance/OutOfPlace.php',
-  'languagedetector\\distanceinterface' => '//DistanceInterface.php',
+  'languagedetector\\distanceinterface' => '/DistanceInterface.php',
 );
     // }}}
 

@@ -34,57 +34,19 @@
   | Authors: César Rodas <crodas@php.net>                                           |
   +---------------------------------------------------------------------------------+
 */
-namespace LanguageDetector;
+namespace LanguageDetector\Format;
 
-class Config
+use LanguageDetector\FormatInterface;
+
+class JSON implements FormatInterface
 {
-    protected $minLenNGram = 2;
-    protected $maxLenNGram = 4;
-    protected $maxNGram    = 300;
-    protected $sort        = 'LanguageDetector\\Sort\\PageRank';
-    protected $distance    = 'LanguageDetector\\Distance\\OutOfPlace';
-    protected $mb          = false;
-    
-    public function __call($name, $args)
+    public function dump(Array $data)
     {
-        return $this->$name;
+        return json_encode($data);
     }
 
-    public function getSortObject()
+    public function load($bytes)
     {
-        return new $this->sort;
-    } 
-
-    public function getParser()
-    {
-        return new NGramParser($this->minLenNGram, $this->maxLenNGram, $this->mb);
-    }
-
-    public function getDistanceObject()
-    {
-        if (is_object($this->distance)) {
-            return $this->distance;
-        }
-        return new $this->distance;
-    }
-
-    public function useMb($use)
-    {
-        $this->mb = (bool)$use;
-    }
-
-    public function setDistanceObject(DistanceInterface $obj)
-    {
-        $this->distance = $obj;
-        return $this;
-    }
-
-    public static function  __set_state(Array $state)
-    {
-        $obj = new self;
-        foreach ($state as $k => $v) {
-            $obj->$k = $v;
-        }
-        return $obj;
+        return json_decode($bytes);
     }
 }

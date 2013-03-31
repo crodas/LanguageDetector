@@ -42,19 +42,28 @@ class NGramParser
     protected $max;
     protected $mb;
     protected $regex = '/[ \r\n\t_\.\-0-9]+/';
+    protected $regex_mod = 's';
 
     public function __construct($min=2, $max=4, $mb = true)
     {
         $this->min = $min;
         $this->max = $max;
         $this->mb  = $mb;
+        $this->regex    .= $mb ? 'us' : 's';
+        $this->regex_mod = $mb ? 'us' : 's';
     }
 
     public function splitText($text, $len=200)
     {
         $strtolower = $this->mb ? 'mb_strtolower' : 'strtolower';
-        $text = preg_replace($this->regex, '_', $strtolower($text));
-        return preg_split("/(.{{$len}})/u", $text,  0, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
+        $text  = preg_replace($this->regex, '_', $strtolower($text));
+        $parts = preg_split("/(.{{$len}})/" . $this->regex_mod , $text,  0, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
+
+        if (strlen(end($parts)) < 100) {
+            array_pop($parts);
+        }
+
+        return $parts;
     }
 
     public function get($raw_text, $limit = -1)
