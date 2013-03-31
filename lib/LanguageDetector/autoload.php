@@ -18,6 +18,7 @@ spl_autoload_register(function ($class) {
   'languagedetector\\ngramparser' => '//NGramParser.php',
   'languagedetector\\format' => '//Format.php',
   'languagedetector\\learn' => '//Learn.php',
+  'languagedetector\\sort\\sum' => '/Sort/Sum.php',
   'languagedetector\\sort\\pagerank' => '/Sort/PageRank.php',
   'languagedetector\\formatinterface' => '//FormatInterface.php',
   'languagedetector\\detect' => '//Detect.php',

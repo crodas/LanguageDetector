@@ -34,53 +34,17 @@
   | Authors: César Rodas <crodas@php.net>                                           |
   +---------------------------------------------------------------------------------+
 */
-namespace LanguageDetector;
+namespace LanguageDetector\Sort;
 
-class Config
+use LanguageDetector\SortInterface;
+
+class Sum implements SortInterface
 {
-    protected $minLenNGram = 2;
-    protected $maxLenNGram = 4;
-    protected $maxNGram    = 300;
-    protected $sort        = 'LanguageDetector\\Sort\\PageRank';
-    protected $distance    = 'LanguageDetector\\Distance\\OutOfPlace';
-    protected $serializer  = 'LanguageDetector\\Format\\';
-    protected $mb          = false;
-    
-    public function __call($name, $args)
+    public function sort(Array $ngrams)
     {
-        return $this->$name;
-    }
-
-    public function getSortObject()
-    {
-        return new $this->sort;
-    } 
-
-    public function getParser()
-    {
-        return new NGramParser($this->minLenNGram, $this->maxLenNGram, $this->mb);
-    }
-
-    public function getDistanceObject()
-    {
-        if (is_object($this->distance)) {
-            return $this->distance;
-        }
-        return new $this->distance;
-    }
-
-    public function setDistanceObject(DistanceInterface $obj)
-    {
-        $this->distance = $obj;
-        return $this;
-    }
-
-    public static function  __set_state(Array $state)
-    {
-        $obj = new self;
-        foreach ($state as $k => $v) {
-            $obj->$k = $v;
-        }
-        return $obj;
+        $ngrams = array_count_values($ngrams);
+        arsort($ngrams);
+        return $ngrams;
     }
 }
+

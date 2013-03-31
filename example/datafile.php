@@ -6,6 +6,7 @@
      'maxNGram' => 300,
      'sort' => 'LanguageDetector\\Sort\\PageRank',
      'distance' => 'LanguageDetector\\Distance\\OutOfPlace',
+     'serializer' => 'LanguageDetector\\Format\\',
      'mb' => false,
   )),
   'data' => 
