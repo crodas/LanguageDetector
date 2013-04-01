@@ -90,6 +90,10 @@ class Detect
         $chunks = $this->parser->splitText($text, $limit);
         $results = array();
 
+        if (empty($chunk)) {
+            throw new \Exception("Invalid input");
+        }
+
         foreach ($chunks as $i => $chunk) {
             $result = $this->detectChunk($chunk);
             if (is_string($result)) {
