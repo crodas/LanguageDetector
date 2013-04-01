@@ -18,6 +18,10 @@ class AssertTest extends \phpunit_framework_testcase
     {
         $detect = new LanguageDetector\Detect(__DIR__."/../example/datafile.php");
         $lang = $detect->detect(file_get_contents($file));
+        if (is_array($lang)) {
+            $this->assertEquals($expected, $lang[0]['lang']);
+            return;
+        }
         $this->assertEquals($expected, $lang);
     }
 }
