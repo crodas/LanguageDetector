@@ -1,4 +1,4 @@
-LanguageDetector
+LanguageDetector [![Build Status](https://travis-ci.org/crodas/LanguageDetector.png)](https://travis-ci.org/crodas/LanguageDetector)
 ================
 
 PHP Class to detect languages from any free text.
