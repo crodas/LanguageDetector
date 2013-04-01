@@ -85,6 +85,11 @@ class Detect
         return $distance[0]['lang'];
     }
 
+    public function getLanguages()
+    {
+        return array_keys($this->data);
+    }
+
     public function detect($text, $limit = 300)
     {
         $chunks = $this->parser->splitText($text, $limit);

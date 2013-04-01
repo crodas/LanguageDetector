@@ -79,6 +79,11 @@ class Config
         return $this;
     }
 
+    public function export()
+    {
+        return get_object_vars($this);
+    }
+
     public static function  __set_state(Array $state)
     {
         $obj = new self;

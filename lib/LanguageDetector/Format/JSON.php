@@ -37,16 +37,20 @@
 namespace LanguageDetector\Format;
 
 use LanguageDetector\FormatInterface;
+use LanguageDetector\Config;
 
 class JSON implements FormatInterface
 {
     public function dump(Array $data)
     {
+        $data['config'] = $data['config']->export();
         return json_encode($data);
     }
 
     public function load($bytes)
     {
-        return json_decode($bytes);
+        $object = json_decode($bytes, true);
+        $object['config'] = Config::__set_state($object['config']);
+        return $object;
     }
 }

@@ -68,6 +68,6 @@ class Format
         }
 
         $content = file_get_contents($this->path);
-        return $this->object->load($data);
+        return $this->object->load($content);
     }
 }
