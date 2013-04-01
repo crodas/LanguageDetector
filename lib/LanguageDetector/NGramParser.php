@@ -59,7 +59,7 @@ class NGramParser
         $text  = preg_replace($this->regex, '_', $strtolower($text));
         $parts = preg_split("/(.{{$len}})/" . $this->regex_mod , $text,  0, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
 
-        if (strlen(end($parts)) < 100) {
+        if (count($parts) > 1 && strlen(end($parts)) < 100) {
             array_pop($parts);
         }
 
