@@ -45,11 +45,11 @@ class PageRank implements SortInterface
 
     // subs(array $a, array $b) {{{
     /**
-     *  Array substraction
+     *  Array subtraction
      *
      *  @param array $a
      *  @param array $b
-     *  
+     *
      *  @return array
      */
     final protected function subs($a, $b)
@@ -62,7 +62,7 @@ class PageRank implements SortInterface
             if (!isset($b[$index])) {
                 throw new \Exception("Array shape mismatch");
             }
-            $array[$index] = $value - $b[$index]; 
+            $array[$index] = $value - $b[$index];
         }
         return $array;
     }
@@ -74,7 +74,7 @@ class PageRank implements SortInterface
      *
      *  @param array $a
      *  @param array $b
-     *  
+     *
      *  @return array
      */
     final protected function mult($a, $b)
@@ -87,13 +87,13 @@ class PageRank implements SortInterface
             if (!isset($b[$index])) {
                 throw new Exception("Array shape  mismatch");
             }
-            $val += $b[$index]  * $value;
+            $val += $b[$index] * $value;
         }
         return $val;
     }
     // }}}
 
-    // hasCoverge {{{
+    // hasConverge {{{
     protected function hasConverge(Array $old, Array $newValues)
     {
         $total = count($newValues);
@@ -110,7 +110,7 @@ class PageRank implements SortInterface
         $graph    = array();
         $values   = array();
         $total = count($ngrams);
-        for($i=0; $i < $total; $i++) {
+        for ($i=0; $i < $total; $i++) {
             for ($e=$i; $e < $total && $e <= $i+5; $e++) {
                 if ($ngrams[$e] == $ngrams[$i]) continue;
 
@@ -147,7 +147,7 @@ class PageRank implements SortInterface
             }
             /* update values array */
             $values = $newvals;
-        } while(true);
+        } while (true);
 
         arsort($newvals);
 

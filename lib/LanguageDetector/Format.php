@@ -50,7 +50,7 @@ class Format
         }
         $this->object = new $class;
         if (!$this->object instanceof FormatInterface) {
-            throw new \RuntimeException("{$class} must implment " . __NAMESPACE__ . "\\FormatInterface interface");
+            throw new \RuntimeException("{$class} must implement " . __NAMESPACE__ . "\\FormatInterface interface");
         }
         $this->path   = $path;
     }
