@@ -54,9 +54,22 @@ class Detect
             }
             $this->$type = $data[$type];
         }
+        if (!($data['config'] instanceof Config)) {
+            throw new \Exception("Internal error, config *must* an object");
+        }
         $this->parser   = $this->config->getParser();
         $this->sort     = $this->config->getSortObject();
         $this->distance = $this->config->GetDistanceObject();
+    }
+
+    public function getKnowledge()
+    {
+        return $this->data;
+    }
+
+    public function getConfig()
+    {
+        return $this->config;
     }
 
     protected function detectChunk($text)
