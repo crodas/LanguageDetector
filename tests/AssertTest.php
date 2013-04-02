@@ -4,7 +4,7 @@ class AssertTest extends \phpunit_framework_testcase
 {
     public static function langProvider()
     {
-        return array(array('json'), array('php'));
+        return array(array('json'), array('php'), array('ses'));
     }
     public static function provider()
     {

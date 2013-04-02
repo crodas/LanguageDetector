@@ -16,4 +16,5 @@ $c->addStepCallback(function($lang, $status) {
     echo "Learning {$lang}: $status\n";
 });
 $c->save(__DIR__ . '/datafile.php');
+$c->save(__DIR__ . '/datafile.ses');
 $c->save(__DIR__ . '/datafile.json');

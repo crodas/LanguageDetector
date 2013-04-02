@@ -25,6 +25,7 @@ spl_autoload_register(function ($class) {
   'languagedetector\\config' => '/Config.php',
   'languagedetector\\format\\json' => '/Format/JSON.php',
   'languagedetector\\format\\php' => '/Format/PHP.php',
+  'languagedetector\\format\\ses' => '/Format/SES.php',
   'languagedetector\\distance\\outofplace' => '/Distance/OutOfPlace.php',
   'languagedetector\\distanceinterface' => '/DistanceInterface.php',
 );
