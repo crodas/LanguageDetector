@@ -40,4 +40,3 @@ interface DistanceInterface
 {
     public function distance(Array $a, Array $b, $total);
 }
-

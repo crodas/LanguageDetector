@@ -50,4 +50,3 @@ class SES implements FormatInterface
         return unserialize($content);
     }
 }
-

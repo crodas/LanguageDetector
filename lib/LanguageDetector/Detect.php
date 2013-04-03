@@ -78,13 +78,13 @@ class Detect
         $total  = min($this->config->maxNGram(), count($ngrams));
         foreach ($this->data as $lang => $data) {
             $distance[] = array(
-                'lang'  => $lang, 
+                'lang'  => $lang,
                 'score' => $this->distance->distance($data, $ngrams, $total),
             );
         }
 
         usort($distance, function($a, $b) {
-            return $a['score'] > $b['score'] ? -1 : 1; 
+            return $a['score'] > $b['score'] ? -1 : 1;
         });
 
         if ($distance[0]['score'] - $distance[1]['score'] <= $this->threshold) {
@@ -93,8 +93,8 @@ class Detect
             return $distance;
         }
 
-        /* we found a candiate which is at least 2% better than the second
-           candiate */
+        /* we found a candidate which is at least 2% better than the second
+           candidate */
         return $distance[0]['lang'];
     }
 
@@ -139,7 +139,7 @@ class Detect
         if (count($candidates) > 0) {
             $candidates = array_count_values($candidates);
             arsort($candidates);
-            if (current($candidates) != array_sum(array_splice($candidates, 0,2))/2) {
+            if (current($candidates) != array_sum(array_splice($candidates, 0, 2))/2) {
                 /* the first *is* more than the second */
                 return key($candidates);
             }
@@ -154,7 +154,7 @@ class Detect
         $distance = array_values($distance);
 
         usort($distance, function($a, $b) {
-            return $a['score'] > $b['score'] ? -1 : 1; 
+            return $a['score'] > $b['score'] ? -1 : 1;
         });
 
         if ($distance[0]['score'] - $distance[1]['score'] <= $this->threshold) {
@@ -164,5 +164,4 @@ class Detect
         
         return $distance[0]['lang'];
     }
-
 }

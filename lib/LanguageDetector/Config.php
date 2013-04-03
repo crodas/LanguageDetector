@@ -53,7 +53,7 @@ class Config
     public function getSortObject()
     {
         return new $this->sort;
-    } 
+    }
 
     public function getParser()
     {
@@ -84,7 +84,7 @@ class Config
         return get_object_vars($this);
     }
 
-    public static function  __set_state(Array $state)
+    public static function __set_state(Array $state)
     {
         $obj = new self;
         foreach ($state as $k => $v) {

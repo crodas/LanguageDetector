@@ -47,4 +47,3 @@ class Sum implements SortInterface
         return $ngrams;
     }
 }
-
