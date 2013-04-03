@@ -70,7 +70,7 @@ class NGramParser
     {
         $strtolower = $this->mb ? 'mb_strtolower' : 'strtolower';
         $strlen     = $this->mb ? 'mb_strlen' : 'strlen';
-        $substr     = $this->mb ? 'mb_substr' : 'substr'; 
+        $substr     = $this->mb ? 'mb_substr' : 'substr';
 
         $text = preg_replace($this->regex, '_', $strtolower($raw_text));
 
@@ -80,9 +80,9 @@ class NGramParser
         $len    = $strlen($text);
         $min    = $this->min;
         $max    = $this->max;
-        $ngrams = array();  
+        $ngrams = array();
         for ($i=$min; $i <= $max; $i++) {
-            for($e=0; $e < $len; $e++) {
+            for ($e=0; $e < $len; $e++) {
                 $ngrams[] = $substr($text, $e, $i);
             }
         }
