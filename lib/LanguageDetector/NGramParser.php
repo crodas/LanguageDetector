@@ -53,10 +53,16 @@ class NGramParser
         $this->regex_mod = $mb ? 'us' : 's';
     }
 
-    public function splitText($text, $len=200)
+    public function cleanText($text)
     {
         $strtolower = $this->mb ? 'mb_strtolower' : 'strtolower';
-        $text  = preg_replace($this->regex, '_', $strtolower($text));
+
+        return preg_replace($this->regex, '_', $strtolower($text));
+    }
+
+    public function splitText($text, $len=200)
+    {
+        $text  = $this->cleanText($text);
         $parts = preg_split("/(.{{$len}})/" . $this->regex_mod , $text,  0, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
 
         if (count($parts) > 1 && strlen(end($parts)) < 100) {
@@ -68,11 +74,9 @@ class NGramParser
 
     public function get($raw_text, $limit = -1)
     {
-        $strtolower = $this->mb ? 'mb_strtolower' : 'strtolower';
-        $strlen     = $this->mb ? 'mb_strlen' : 'strlen';
-        $substr     = $this->mb ? 'mb_substr' : 'substr';
-
-        $text = preg_replace($this->regex, '_', $strtolower($raw_text));
+        $strlen = $this->mb ? 'mb_strlen' : 'strlen';
+        $substr = $this->mb ? 'mb_substr' : 'substr';
+        $text   = $this->cleanText($raw_text);
 
         if ($limit > 0) {
             $text = $substr($text, 0, $limit);

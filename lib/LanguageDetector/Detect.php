@@ -42,13 +42,14 @@ class Detect
     protected $data;
     protected $parser;
     protected $sort;
+    protected $tokens;
     protected $threshold = .02;
 
     public function __construct($datafile)
     {
         $format = new Format($datafile);
         $data   = $format->load();
-        foreach (array('config', 'data') as $type) {
+        foreach (array('tokens', 'config', 'data') as $type) {
             if (empty($data[$type])) {
                 throw new \Exception("Invalid data file, missing {$type}");
             }
@@ -72,10 +73,21 @@ class Detect
         return $this->config;
     }
 
+    protected function cleanUpTokens(Array $ngrams)
+    {
+        foreach ($ngrams as $key => $value) {
+            if (empty($this->tokens[$key])) {
+                unset($ngrams[$key]);
+            }
+        }
+        return $ngrams;
+    }
+
     protected function detectChunk($text)
     {
         $ngrams = $this->sort->sort($this->parser->get($text));
         $total  = min($this->config->maxNGram(), count($ngrams));
+        $ngrams = $this->cleanUpTokens($ngrams);
         foreach ($this->data as $lang => $data) {
             $distance[] = array(
                 'lang'  => $lang,

@@ -42,6 +42,7 @@ class Learn
     protected $callback;
     protected $config;
     protected $output = array();
+    protected $tokens = array();
 
     public function __construct(Config $config)
     {
@@ -76,6 +77,7 @@ class Learn
         $max      = $this->config->maxNGram();
         $parser   = $this->config->getParser();
         $callback = $this->callback;
+        $all      = array();
         foreach ($this->samples as $lang => $texts) {
             if (!empty($this->output[$lang])) {
                 continue;
@@ -86,8 +88,10 @@ class Learn
             $text = implode("\n", $texts);
             $pos  = 0;
             $data = array();
-            foreach (array_splice($sort->sort($parser->get($text)), 0, $max) as $ngram => $score) {
+            $ngrams =  $sort->sort($parser->get($text));
+            foreach (array_splice($ngrams, 0, $max) as $ngram => $score) {
                 $data[$ngram] = array('pos' => $pos++, 'score' => $score);
+                $all[$ngram]  = 1;
             }
             $this->output[$lang] = $data;
             if ($callback) {
@@ -95,7 +99,13 @@ class Learn
             }
         }
 
+        $this->tokens = array_merge($all, $this->tokens);
+
         $format = new Format($output);
-        $format->dump(array('config' => $this->config, 'data' => $this->output));
+        $format->dump(array(
+            'config' => $this->config, 
+            'tokens' => $this->tokens,
+            'data' => $this->output
+        ));
     }
 }
