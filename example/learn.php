@@ -10,6 +10,7 @@ $config->useMb(true);
 
 $c = new LanguageDetector\Learn($config);
 foreach (glob(__DIR__ . '/samples/*') as $file) {
+    //if (basename($file) == 'german') continue;
     $c->addSample(basename($file), file_get_contents($file));
 }
 $c->addStepCallback(function($lang, $status) {

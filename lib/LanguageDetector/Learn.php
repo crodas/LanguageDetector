@@ -42,7 +42,6 @@ class Learn
     protected $callback;
     protected $config;
     protected $output = array();
-    protected $tokens = array();
 
     public function __construct(Config $config)
     {
@@ -64,10 +63,22 @@ class Learn
             $this->samples[$label] = array();
         }
         $this->samples[$label][] = $text;
-        $this->output[$label]    = array();
     }
 
+
     public function save($output)
+    {
+        if (empty($this->output)) {
+            $this->doLearn();
+        }
+
+        $format = new Format($output);
+        $format->dump($this->output);
+
+        return $this;
+    }
+
+    public function doLearn()
     {
         if (empty($this->samples)) {
             throw new \Exception("You need to provide samples");
@@ -77,35 +88,48 @@ class Learn
         $max      = $this->config->maxNGram();
         $parser   = $this->config->getParser();
         $callback = $this->callback;
-        $all      = array();
+        $tokens   = array();
         foreach ($this->samples as $lang => $texts) {
-            if (!empty($this->output[$lang])) {
-                continue;
-            }
             if ($callback) {
                 $callback($lang, 'start');
             }
-            $text = implode("\n", $texts);
-            $pos  = 0;
-            $data = array();
+            $text   = implode("\n", $texts);
             $ngrams =  $sort->sort($parser->get($text));
-            foreach (array_splice($ngrams, 0, $max) as $ngram => $score) {
-                $data[$ngram] = array('pos' => $pos++, 'score' => $score);
-                $all[$ngram]  = 1;
+            foreach (array_slice($ngrams, 0, $max) as $ngram => $score) {
+                $tokens[$ngram] = isset($tokens[$ngram]) ? $tokens[$ngram]+1 : 1;
             }
-            $this->output[$lang] = $data;
-            if ($callback) {
-                $callback($lang, 'end');
-            }
+            $knowledge[$lang] = $ngrams;
         }
 
-        $this->tokens = array_merge($all, $this->tokens);
+        $threshold = count($this->samples) * .8;
+        $blacklist = array_filter(array_map(function($count) use ($threshold) {
+            return $count >= $threshold;
+        }, $tokens));
 
-        $format = new Format($output);
-        $format->dump(array(
-            'config' => $this->config, 
-            'tokens' => $this->tokens,
-            'data' => $this->output
-        ));
+        $langs = array();
+        foreach ($knowledge as $lang => $ngrams) {
+            $pos  = 0;
+            $data = array();
+            foreach ($ngrams as $ngram => $score) {
+                if (!empty($blacklist[$ngram])) {
+                    continue;
+                }
+                $data[$ngram] = array('pos' => $pos++, 'score' => $score);
+                if ($pos === $max) {
+                    break;
+                }
+            }
+
+            $langs[$lang] = $data;
+        }
+
+        $this->output = array(
+            'config' => $this->config,
+            'blacklist' => $blacklist,
+            'tokens' => $tokens,
+            'data'   => $langs,
+        );
+
+        return $this;
     }
 }
