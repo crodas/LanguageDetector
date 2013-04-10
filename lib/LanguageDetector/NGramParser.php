@@ -36,6 +36,12 @@
 */
 namespace LanguageDetector;
 
+function mb_str_split( $string ) { 
+    # Split at all position not after the start: ^ 
+    # and not before the end: $ 
+    return preg_split('/(?<!^)(?!$)/u', $string ); 
+} 
+
 class NGramParser
 {
     protected $min;
@@ -85,9 +91,15 @@ class NGramParser
         $min    = $this->min;
         $max    = $this->max;
         $ngrams = array();
+        
+        $letters = mb_str_split($text);
         for ($i=$min; $i <= $max; $i++) {
             for ($e=0; $e < $len; $e++) {
-                $ngrams[] = $substr($text, $e, $i);
+                $ngram = "";
+                for ($x=$e; $x < $e+$i  && $x< $len; $x++) {
+                    $ngram .= $letters[$x];
+                }
+                $ngrams[] = $ngram;
             }
         }
 
