@@ -36,9 +36,7 @@
 */
 namespace LanguageDetector\Sort;
 
-use LanguageDetector\SortInterface;
-
-class PageRank implements SortInterface
+class PageRank extends Common
 {
     protected $damping = 0.85;
     protected $convergence = 0.01;

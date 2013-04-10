@@ -34,71 +34,32 @@
   | Authors: César Rodas <crodas@php.net>                                           |
   +---------------------------------------------------------------------------------+
 */
-namespace LanguageDetector;
+namespace LanguageDetector\Distance;
 
-class Config
+use LanguageDetector\DistanceInterface;
+
+class Bayes implements DistanceInterface
 {
-    protected $minLenNGram = 2;
-    protected $maxLenNGram = 4;
-    protected $maxNGram    = 300;
-    protected $sort        = 'LanguageDetector\\Sort\\PageRank';
-    protected $distance    = 'LanguageDetector\\Distance\\OutOfPlace';
-    protected $mb          = false;
-    
-    public function __call($name, $args)
+    protected $tokens;
+
+    public function setTokens(Array $tokens)
     {
-        if (!empty($args)) {
-            $this->$name = $args[0];
-            return $this;
+        $this->tokens = $tokens;
+    }
+
+    public function distance(Array $sample, Array $ngrams, $total)
+    {
+        $score   = 0;
+        $penalty = count($sample)+1;
+        $tokens  = $this->tokens;
+
+        foreach (array_slice($sample, 0, count($sample)) as $ngram => $dummy) {
+            if (empty($tokens[$ngram])) {
+                continue;
+            }
+            $score += $dummy['score'] / $tokens[$ngram];
         }
-        return $this->$name;
-    }
 
-    public function setSortObject(SortInterface $sort)
-    {
-        $this->sort = $sort;
-    }
-
-    public function getSortObject()
-    {
-        return is_string($this->sort) ? new $this->sort : $this->sort;
-    }
-
-    public function getParser()
-    {
-        return new NGramParser($this->minLenNGram, $this->maxLenNGram, $this->mb);
-    }
-
-    public function getDistanceObject()
-    {
-        if (is_object($this->distance)) {
-            return $this->distance;
-        }
-        return new $this->distance;
-    }
-
-    public function useMb($use)
-    {
-        $this->mb = (bool)$use;
-    }
-
-    public function setDistanceObject(DistanceInterface $obj)
-    {
-        $this->distance = $obj;
-        return $this;
-    }
-
-    public function export()
-    {
-        return get_object_vars($this);
-    }
-
-    public static function __set_state(Array $state)
-    {
-        $obj = new self;
-        foreach ($state as $k => $v) {
-            $obj->$k = $v;
-        }
-        return $obj;
+        return 1 - ($score / $total);
     }
 }

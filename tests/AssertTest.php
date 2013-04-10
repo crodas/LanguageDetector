@@ -10,8 +10,10 @@ class AssertTest extends \phpunit_framework_testcase
     {
         $data = array();
         foreach (self::langProvider() as $format) {
-            foreach (glob(__DIR__ . "/assert/*/*") as $file) {
-                $data[] = array($format[0], $file, basename(dirname($file)));
+            foreach (array('outofplace') as $distance) {
+                foreach (glob(__DIR__ . "/assert/*/*") as $file) {
+                    $data[] = array($format[0], 'LanguageDetector\Distance\\' . $distance, $file, basename(dirname($file)));
+                }
             }
         }
         return $data;
@@ -20,9 +22,10 @@ class AssertTest extends \phpunit_framework_testcase
     /**
      *  @dataProvider provider
      */
-    public function testAll($format, $file, $expected)
+    public function testAll($format, $class, $file, $expected)
     {
-        $detect = new LanguageDetector\Detect(__DIR__."/../example/datafile.{$format}");
+        $detect = new LanguageDetector\Detect(__DIR__."/../data/languages.{$format}");
+        $detect->setDistance(new $class);
         $lang = $detect->detect(file_get_contents($file));
         if (is_array($lang)) {
             $this->assertEquals($expected, $lang[0]['lang']);
@@ -36,7 +39,7 @@ class AssertTest extends \phpunit_framework_testcase
      */
     public function testGetLanguages($format)
     {
-        $detect = new LanguageDetector\Detect(__DIR__."/../example/datafile." . $format);
+        $detect = new LanguageDetector\Detect(__DIR__."/../data/languages." . $format);
         $langs = $detect->getLanguages();
         $this->assertTrue(is_array($langs));
         $this->assertTrue(count($langs) > 10);

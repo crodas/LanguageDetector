@@ -40,6 +40,10 @@ use LanguageDetector\DistanceInterface;
 
 class OutOfPlace implements DistanceInterface
 {
+    public function setTokens(Array $tokens)
+    {
+    }
+
     public function distance(Array $sample, Array $ngrams, $total)
     {
         $score   = 0;

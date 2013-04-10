@@ -39,4 +39,5 @@ namespace LanguageDetector;
 interface SortInterface
 {
     public function sort(Array $ngrams);
+    public function summarize(Array $ngrams, $max);
 }

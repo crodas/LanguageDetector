@@ -38,7 +38,7 @@ namespace LanguageDetector\Sort;
 
 use LanguageDetector\SortInterface;
 
-class Sum implements SortInterface
+class Sum extends Common
 {
     public function sort(Array $ngrams)
     {

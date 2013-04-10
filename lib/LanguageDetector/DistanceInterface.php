@@ -38,5 +38,6 @@ namespace LanguageDetector;
 
 interface DistanceInterface
 {
+    public function setTokens(Array $tokens); 
     public function distance(Array $a, Array $b, $total);
 }

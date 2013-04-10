@@ -34,71 +34,27 @@
   | Authors: César Rodas <crodas@php.net>                                           |
   +---------------------------------------------------------------------------------+
 */
-namespace LanguageDetector;
+namespace LanguageDetector\Sort;
 
-class Config
+use LanguageDetector\SortInterface;
+
+abstract class Common implements SortInterface
 {
-    protected $minLenNGram = 2;
-    protected $maxLenNGram = 4;
-    protected $maxNGram    = 300;
-    protected $sort        = 'LanguageDetector\\Sort\\PageRank';
-    protected $distance    = 'LanguageDetector\\Distance\\OutOfPlace';
-    protected $mb          = false;
-    
-    public function __call($name, $args)
+    public function summarize(Array $knowledge, $max)
     {
-        if (!empty($args)) {
-            $this->$name = $args[0];
-            return $this;
+        $groups = array();
+        foreach ($knowledge as $lang => $ngrams) {
+            $pos  = 0;
+            $data = array();
+            foreach ($ngrams as $ngram => $score) {
+                $data[$ngram] = array('pos' => $pos++, 'score' => $score);
+                if ($pos === $max) {
+                    break;
+                }
+            }
+
+            $groups[$lang] = $data;
         }
-        return $this->$name;
-    }
-
-    public function setSortObject(SortInterface $sort)
-    {
-        $this->sort = $sort;
-    }
-
-    public function getSortObject()
-    {
-        return is_string($this->sort) ? new $this->sort : $this->sort;
-    }
-
-    public function getParser()
-    {
-        return new NGramParser($this->minLenNGram, $this->maxLenNGram, $this->mb);
-    }
-
-    public function getDistanceObject()
-    {
-        if (is_object($this->distance)) {
-            return $this->distance;
-        }
-        return new $this->distance;
-    }
-
-    public function useMb($use)
-    {
-        $this->mb = (bool)$use;
-    }
-
-    public function setDistanceObject(DistanceInterface $obj)
-    {
-        $this->distance = $obj;
-        return $this;
-    }
-
-    public function export()
-    {
-        return get_object_vars($this);
-    }
-
-    public static function __set_state(Array $state)
-    {
-        $obj = new self;
-        foreach ($state as $k => $v) {
-            $obj->$k = $v;
-        }
-        return $obj;
+        return $groups;
     }
 }

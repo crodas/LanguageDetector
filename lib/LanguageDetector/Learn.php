@@ -96,38 +96,21 @@ class Learn
             $text   = implode("\n", $texts);
             $ngrams =  $sort->sort($parser->get($text));
             foreach (array_slice($ngrams, 0, $max) as $ngram => $score) {
-                $tokens[$ngram] = isset($tokens[$ngram]) ? $tokens[$ngram]+1 : 1;
+                if (!isset($tokens[$ngram])) {
+                    $tokens[$ngram] = 0;
+                }
+                $tokens[$ngram] += $score;
             }
             $knowledge[$lang] = $ngrams;
         }
 
-        $threshold = count($this->samples) * .8;
-        $blacklist = array_filter(array_map(function($count) use ($threshold) {
-            return $count >= $threshold;
-        }, $tokens));
-
-        $langs = array();
-        foreach ($knowledge as $lang => $ngrams) {
-            $pos  = 0;
-            $data = array();
-            foreach ($ngrams as $ngram => $score) {
-                if (!empty($blacklist[$ngram])) {
-                    continue;
-                }
-                $data[$ngram] = array('pos' => $pos++, 'score' => $score);
-                if ($pos === $max) {
-                    break;
-                }
-            }
-
-            $langs[$lang] = $data;
-        }
+        $groups = $sort->summarize($knowledge, $max);
+        arsort($tokens);
 
         $this->output = array(
             'config' => $this->config,
-            'blacklist' => $blacklist,
             'tokens' => $tokens,
-            'data'   => $langs,
+            'data'   => $groups,
         );
 
         return $this;
