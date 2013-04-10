@@ -25,13 +25,12 @@ spl_autoload_register(function ($class) {
   'languagedetector\\formatinterface' => '/FormatInterface.php',
   'languagedetector\\detect' => '/Detect.php',
   'languagedetector\\config' => '/Config.php',
-  'languagedetector\\summaryinterface' => '/SummaryInterface.php',
   'languagedetector\\format\\json' => '/Format/JSON.php',
   'languagedetector\\format\\php' => '/Format/PHP.php',
   'languagedetector\\format\\ses' => '/Format/SES.php',
   'languagedetector\\distance\\bayes' => '/Distance/Bayes.php',
-  'languagedetector\\distance\\outofplace' => '/Distance/OutOfPlace.php',
   'languagedetector\\distanceinterface' => '/DistanceInterface.php',
+  'languagedetector\\distance\\outofplace' => '/Distance/OutOfPlace.php',
 );
     // }}}
 
@@ -39,20 +38,43 @@ spl_autoload_register(function ($class) {
     static $deps    = array (
   'languagedetector\\sort\\bayes' => 
   array (
-    0 => 'languagedetector\\sort\\common',
-    1 => 'languagedetector\\sort\\sum',
+    0 => 'languagedetector\\sortinterface',
+    1 => 'languagedetector\\sort\\common',
+    2 => 'languagedetector\\sort\\sum',
   ),
   'languagedetector\\sort\\sum' => 
   array (
-    0 => 'languagedetector\\sort\\common',
+    0 => 'languagedetector\\sortinterface',
+    1 => 'languagedetector\\sort\\common',
+  ),
+  'languagedetector\\sort\\common' => 
+  array (
+    0 => 'languagedetector\\sortinterface',
   ),
   'languagedetector\\sort\\pagerank' => 
   array (
-    0 => 'languagedetector\\sort\\common',
-  ),
-  'languagedetector\\summaryinterface' => 
-  array (
     0 => 'languagedetector\\sortinterface',
+    1 => 'languagedetector\\sort\\common',
+  ),
+  'languagedetector\\format\\json' => 
+  array (
+    0 => 'languagedetector\\formatinterface',
+  ),
+  'languagedetector\\format\\php' => 
+  array (
+    0 => 'languagedetector\\formatinterface',
+  ),
+  'languagedetector\\format\\ses' => 
+  array (
+    0 => 'languagedetector\\formatinterface',
+  ),
+  'languagedetector\\distance\\bayes' => 
+  array (
+    0 => 'languagedetector\\distanceinterface',
+  ),
+  'languagedetector\\distance\\outofplace' => 
+  array (
+    0 => 'languagedetector\\distanceinterface',
   ),
 );
     // }}}
