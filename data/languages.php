@@ -1,13 +1,13 @@
 <?php return array (
   'config' => 
-  LanguageDetector\Config::__set_state(array(
-     'minLenNGram' => 2,
-     'maxLenNGram' => 4,
-     'maxNGram' => 300,
-     'sort' => 'LanguageDetector\\Sort\\PageRank',
-     'distance' => 'LanguageDetector\\Distance\\OutOfPlace',
-     'mb' => true,
-  )),
+  array (
+    'minLenNGram' => 2,
+    'maxLenNGram' => 4,
+    'maxNGram' => 300,
+    'sort' => 'LanguageDetector\\Sort\\PageRank',
+    'distance' => 'LanguageDetector\\Distance\\OutOfPlace',
+    'mb' => true,
+  ),
   'tokens' => 
   array (
     '_de' => 3.9675575945937,

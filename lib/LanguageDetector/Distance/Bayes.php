@@ -53,13 +53,13 @@ class Bayes implements DistanceInterface
         $penalty = count($sample)+1;
         $tokens  = $this->tokens;
 
-        foreach (array_slice($sample, 0, count($sample)) as $ngram => $dummy) {
-            if (empty($tokens[$ngram])) {
+        foreach (array_slice($ngrams, 0, count($sample)) as $ngram => $prob) {
+            if (empty($sample[$ngram])) {
                 continue;
             }
-            $score += $dummy['score'] / $tokens[$ngram];
+            $score += $sample[$ngram];
         }
 
-        return 1 - ($score / $total);
+        return 100*($score / count($sample));
     }
 }

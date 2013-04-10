@@ -44,6 +44,7 @@ class PHP implements FormatInterface
 
     public function dump(Array $data)
     {
+        $data['config'] = $data['config']->export();
         return '<?php return ' . var_export($data, true) . ';';
     }
 

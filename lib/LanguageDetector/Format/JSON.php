@@ -49,8 +49,6 @@ class JSON implements FormatInterface
 
     public function load($bytes)
     {
-        $object = json_decode($bytes, true);
-        $object['config'] = Config::__set_state($object['config']);
-        return $object;
+        return json_decode($bytes, true);
     }
 }

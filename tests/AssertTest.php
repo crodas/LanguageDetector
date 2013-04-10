@@ -10,7 +10,7 @@ class AssertTest extends \phpunit_framework_testcase
     {
         $data = array();
         foreach (self::langProvider() as $format) {
-            foreach (array('outofplace') as $distance) {
+            foreach (array('bayes', 'outofplace') as $distance) {
                 foreach (glob(__DIR__ . "/assert/*/*") as $file) {
                     $data[] = array($format[0], 'LanguageDetector\Distance\\' . $distance, $file, basename(dirname($file)));
                 }
@@ -24,7 +24,8 @@ class AssertTest extends \phpunit_framework_testcase
      */
     public function testAll($format, $class, $file, $expected)
     {
-        $detect = new LanguageDetector\Detect(__DIR__."/../data/languages.{$format}");
+        $dir    = substr($class,-5) === 'bayes' ? 'bayes' : '';
+        $detect = new LanguageDetector\Detect(__DIR__."/../data/$dir/languages.{$format}");
         $detect->setDistance(new $class);
         $lang = $detect->detect(file_get_contents($file));
         if (is_array($lang)) {

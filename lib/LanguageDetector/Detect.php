@@ -56,7 +56,7 @@ class Detect
             $this->$type = $data[$type];
         }
         if (!($data['config'] instanceof Config)) {
-            throw new \Exception("Internal error, config *must* an object");
+            $this->config = Config::__set_state($data['config']);
         }
         $this->parser   = $this->config->getParser();
         $this->sort     = $this->config->getSortObject();

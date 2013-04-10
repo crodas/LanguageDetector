@@ -43,7 +43,7 @@ abstract class Common implements SortInterface
     public function summarize(Array $knowledge, $max)
     {
         $groups = array();
-        foreach ($knowledge as $lang => $ngrams) {
+        foreach ($knowledge as $group => $ngrams) {
             $pos  = 0;
             $data = array();
             foreach ($ngrams as $ngram => $score) {
@@ -53,7 +53,7 @@ abstract class Common implements SortInterface
                 }
             }
 
-            $groups[$lang] = $data;
+            $groups[$group] = $data;
         }
         return $groups;
     }

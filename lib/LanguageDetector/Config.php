@@ -90,7 +90,13 @@ class Config
 
     public function export()
     {
-        return get_object_vars($this);
+        $data = get_object_vars($this);
+        foreach ($data as $key => $value) {
+            if (is_object($value)) {
+                $data[$key] = get_class($value);
+            }
+        }
+        return $data;
     }
 
     public static function __set_state(Array $state)
