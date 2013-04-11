@@ -39,7 +39,9 @@ namespace LanguageDetector;
 class Format
 {
     protected $object;
+    protected $key;
     protected $path;
+    protected static $cache;
 
     public function __construct($path)
     {
@@ -52,7 +54,8 @@ class Format
         if (!$this->object instanceof FormatInterface) {
             throw new \RuntimeException("{$class} must implement " . __NAMESPACE__ . "\\FormatInterface interface");
         }
-        $this->path   = $path;
+        $this->path = $path;
+        $this->key  = $path;
     }
 
     public function dump(Array $data)
@@ -63,11 +66,15 @@ class Format
 
     public function load()
     {
-        if (!empty($this->object->loadByPath)) {
-            return $this->object->load($this->path);
+        if (empty(self::$cache[$this->key])) {
+            if (!empty($this->object->loadByPath)) {
+                self::$cache[$this->key] = $this->object->load($this->path);
+            } else {
+                $content = file_get_contents($this->path);
+                self::$cache[$this->key] = $this->object->load($content);
+            }
         }
 
-        $content = file_get_contents($this->path);
-        return $this->object->load($content);
+        return self::$cache[$this->key];
     }
 }
