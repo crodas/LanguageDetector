@@ -1,4 +1,4 @@
-LanguageDetector [![Build Status](https://travis-ci.org/crodas/LanguageDetector.png)](https://travis-ci.org/crodas/LanguageDetector)
+LanguageDetector [![Build Status](https://travis-ci.org/crodas/LanguageDetector.png)](https://travis-ci.org/crodas/LanguageDetector) [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=crodas&url=https://github.com/crodas/LanguageDetector&title=Language%20Detector%20Library&language=en&tags=github&category=software)
 ================
 
 PHP Class to detect languages from any free text.
