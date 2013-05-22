@@ -86,7 +86,8 @@ class Learn
             $text = implode("\n", $texts);
             $pos  = 0;
             $data = array();
-            foreach (array_splice($sort->sort($parser->get($text)), 0, $max) as $ngram => $score) {
+            $sorted = $sort->sort($parser->get($text));
+            foreach (array_splice($sorted, 0, $max) as $ngram => $score) {
                 $data[$ngram] = array('pos' => $pos++, 'score' => $score);
             }
             $this->output[$lang] = $data;
