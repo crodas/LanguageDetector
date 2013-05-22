@@ -65,6 +65,6 @@ And that's it.
 Algorithms
 ----------
 
-The project is designed to work with modules, which means you can provide your own algorithm for `sorting` and `comparing` the ngrams. By default the library implements the [PageRank](http://en.wikipedia.org/wiki/PageRank) as `sorting` algorithm, and *out of place* (described in the paper) as `comparing`. 
+The project is designed to work with modules, which means you can provide your own algorithm for `sorting` and `comparing` the N-Grams. By default the library implements the [PageRank](http://en.wikipedia.org/wiki/PageRank) as `sorting` algorithm, and *out of place* (described in the paper) as `comparing`. 
 
 In order to supply your own algorithms, you must change the `$config` at *learning stage* to load your own classes (which by the way should implement some interaces).
