@@ -3,7 +3,7 @@ LanguageDetector [![Build Status](https://travis-ci.org/crodas/LanguageDetector.
 
 PHP Class to detect languages from any free text.
 
-It follows the approach described in the [paper](http://scholar.google.com.py/scholar?q=N-Gram-Based+Text+Categorization), a given text is tokenized into [N-Grams](http://en.wikipedia.org/wiki/N-gram) (we cleanup whitespaaces before doing this step). Then we sort the `tokens` and we compare against a language `model`.
+It follows the approach described in the [paper](http://scholar.google.com.py/scholar?q=N-Gram-Based+Text+Categorization), a given text is tokenized into [N-Grams](http://en.wikipedia.org/wiki/N-gram) (we cleanup whitespaces before doing this step). Then we sort the `tokens` and we compare against a language `model`.
 
 How it works
 ------------
