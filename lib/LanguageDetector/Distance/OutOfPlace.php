@@ -54,6 +54,7 @@ class OutOfPlace implements DistanceInterface
             $score += abs($pos - $sample[$ngram]['pos']);
             $pos++;
         }
-        return 1 - ($score / (($penalty-1) * $total));
+        
+        return 1 - $score / ((($penalty-1) * $total));
     }
 }
