@@ -36,6 +36,7 @@
 */
 namespace LanguageDetector\Sort;
 
+use Exception;
 use LanguageDetector\SortInterface;
 
 class PageRank implements SortInterface
@@ -47,10 +48,11 @@ class PageRank implements SortInterface
     /**
      *  Array subtraction
      *
-     *  @param array $a
-     *  @param array $b
+     * @param array $a
+     * @param array $b
      *
-     *  @return array
+     * @throws \Exception on array size mismatch
+     * @return array
      */
     final protected function subs($a, $b)
     {
@@ -72,10 +74,11 @@ class PageRank implements SortInterface
     /**
      *  Array multiplication
      *
-     *  @param array $a
-     *  @param array $b
+     * @param array $a
+     * @param array $b
      *
-     *  @return array
+     * @throws Exception on array size mismatch
+     * @return array
      */
     final protected function mult($a, $b)
     {
@@ -131,6 +134,10 @@ class PageRank implements SortInterface
             }
         }
 
+        //graph would be empty if all ngrams are the same 
+        if (count($graph) === 0) {
+            return $ngrams;
+        }
         $damping = $this->damping;
         $newvals = array();
         do {
