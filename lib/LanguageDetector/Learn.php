@@ -48,7 +48,7 @@ class Learn
         $this->config = $config;
     }
 
-    public function addStepcallback($callback)
+    public function addStepCallback($callback)
     {
         if (!is_callable($callback)) {
             throw new \RuntimeException("\$callback must be callable");
@@ -65,8 +65,13 @@ class Learn
         $this->samples[$label][] = $text;
         $this->output[$label]    = array();
     }
+    
+    public function clear()
+    {
+        $this->output = array();
+    }
 
-    public function save($output)
+    public function save(AbstractFormat $output)
     {
         if (empty($this->samples)) {
             throw new \Exception("You need to provide samples");
@@ -96,7 +101,6 @@ class Learn
             }
         }
 
-        $format = new Format($output);
-        $format->dump(array('config' => $this->config, 'data' => $this->output));
+        $output->dump(array('config' => $this->config, 'data' => $this->output));
     }
 }
