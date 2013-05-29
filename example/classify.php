@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../lib/LanguageDetector/autoload.php';
 
-$detect = new LanguageDetector\Detect("datafile.php");
+$detect = LanguageDetector\Detect::initByPath('datafile.php');
 
 var_dump($detect->detect("Agricultura (-ae, f.), sensu latissimo, est summa omnium artium et scientiarum et technologiarum quae de terris colendis et animalibus creandis curant, ut poma, frumenta, charas, carnes, textilia, et aliae res e terra bene producantur. Specialius, agronomia est ars et scientia quae terris colendis student, agricultio autem animalibus creandis."));
 
