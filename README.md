@@ -35,9 +35,9 @@ $c->addStepCallback(function($lang, $status) {
 
 // save it in `datafile`. 
 // we currently support the `php` serialization but it's trivial
-// to add other formats, just implement something like this 
-// https://github.com/crodas/LanguageDetector/blob/master/lib/LanguageDetector/Format/PHP.php
-$c->save('language.php');
+// to add other formats, just extend `\LanguageDetector\Format\AbstractFormat`. 
+//You can check example at https://github.com/crodas/LanguageDetector/blob/master/lib/LanguageDetector/Format/PHP.php
+$c->save(AbstractFormat::initFormatByPath('language.php'));
 ```
 
 Once we have our language model file (in this case `language.php`) we're ready to classify texts by their language.
@@ -48,7 +48,7 @@ require 'lib/LanguageDetector/autoload.php';
 
 // we load the language model, it would create
 // the $config object for us.
-$detect = new LanguageDetector\Detect('language.php');
+$detect = LanguageDetector\Detect::initByPath('language.php');
 
 $lang = $detect->detect("Agricultura (-ae, f.), sensu latissimo, 
 est summa omnium artium et scientiarum et technologiarum quae de 
