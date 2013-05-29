@@ -37,7 +37,7 @@
 namespace LanguageDetector\Sort;
 
 use Exception;
-use LanguageDetector\SortInterface;
+use LanguageDetector\Sort\SortInterface;
 
 class PageRank implements SortInterface
 {

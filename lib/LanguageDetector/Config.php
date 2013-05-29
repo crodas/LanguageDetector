@@ -36,6 +36,8 @@
 */
 namespace LanguageDetector;
 
+use LanguageDetector\Sort\SortInterface;
+
 class Config
 {
     protected $minLenNGram = 2;
@@ -50,11 +52,17 @@ class Config
         return $this->$name;
     }
 
+    /**
+     * @return SortInterface
+     */
     public function getSortObject()
     {
         return new $this->sort;
     }
 
+    /**
+     * @return NGramParser
+     */
     public function getParser()
     {
         return new NGramParser($this->minLenNGram, $this->maxLenNGram, $this->mb);

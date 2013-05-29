@@ -34,40 +34,9 @@
   | Authors: César Rodas <crodas@php.net>                                           |
   +---------------------------------------------------------------------------------+
 */
-namespace LanguageDetector;
+namespace LanguageDetector\Sort;
 
-class Format
+interface SortInterface
 {
-    protected $object;
-    protected $path;
-
-    public function __construct($path)
-    {
-        $ext   = explode(".", $path);
-        $class = __NAMESPACE__ . '\\Format\\' . strtoupper(end($ext));
-        if (!class_exists($class)) {
-            throw new \RuntimeException("cannot find class $class");
-        }
-        $this->object = new $class;
-        if (!$this->object instanceof FormatInterface) {
-            throw new \RuntimeException("{$class} must implement " . __NAMESPACE__ . "\\FormatInterface interface");
-        }
-        $this->path   = $path;
-    }
-
-    public function dump(Array $data)
-    {
-        $code = $this->object->dump($data);
-        return file_put_contents($this->path, $code, LOCK_EX);
-    }
-
-    public function load()
-    {
-        if (!empty($this->object->loadByPath)) {
-            return $this->object->load($this->path);
-        }
-
-        $content = file_get_contents($this->path);
-        return $this->object->load($content);
-    }
+    public function sort(Array $ngrams);
 }
