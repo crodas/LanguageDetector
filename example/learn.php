@@ -1,7 +1,7 @@
 <?php
 
 require __DIR__ . '/../lib/LanguageDetector/autoload.php';
-
+set_time_limit(0);
 ini_set('memory_limit', '1G');
 mb_internal_encoding('UTF-8');
 
