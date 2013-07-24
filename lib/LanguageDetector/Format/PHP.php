@@ -36,19 +36,24 @@
 */
 namespace LanguageDetector\Format;
 
-use LanguageDetector\FormatInterface;
+use LanguageDetector\AbstractFormat;
 
-class PHP implements FormatInterface
+class PHP extends AbstractFileFormat
 {
-    public $loadByPath = true;
-
+    /**
+     * {@inheritDoc}
+     */
     public function dump(Array $data)
     {
-        return '<?php return ' . var_export($data, true) . ';';
+        return file_put_contents($this->path, '<?php return ' . var_export($data, true) . ';') > 0;
     }
 
-    public function load($path)
+    /**
+     * {@inheritDoc}
+     */
+    public function load()
     {
-        return require $path;
+        /** @noinspection PhpIncludeInspection */
+        return require $this->path;
     }
 }

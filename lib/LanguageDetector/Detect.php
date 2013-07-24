@@ -38,28 +38,34 @@ namespace LanguageDetector;
 
 class Detect
 {
+    /**
+     * @var Config
+     */
     protected $config;
     protected $data;
     protected $parser;
     protected $sort;
     protected $threshold = .02;
 
-    public function __construct($datafile)
+    public function __construct(Config $config, Array $data)
     {
-        $format = new Format($datafile);
-        $data   = $format->load();
+        $this->config = $config;
+        $this->data = $data;
+        $this->parser   = $this->config->getParser();
+        $this->sort     = $this->config->getSortObject();
+        $this->distance = $this->config->GetDistanceObject();
+    }
+    
+    public static function initByPath($datafile)
+    {
+        $format = AbstractFormat::initFormatByPath($datafile);
+        $data   = $format->load($datafile);
         foreach (array('config', 'data') as $type) {
             if (empty($data[$type])) {
                 throw new \Exception("Invalid data file, missing {$type}");
             }
-            $this->$type = $data[$type];
         }
-        if (!($data['config'] instanceof Config)) {
-            throw new \Exception("Internal error, config *must* an object");
-        }
-        $this->parser   = $this->config->getParser();
-        $this->sort     = $this->config->getSortObject();
-        $this->distance = $this->config->GetDistanceObject();
+        return new self($data['config'], $data['data']);   
     }
 
     public function getKnowledge()

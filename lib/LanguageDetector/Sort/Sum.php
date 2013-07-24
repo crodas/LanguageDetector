@@ -36,7 +36,7 @@
 */
 namespace LanguageDetector\Sort;
 
-use LanguageDetector\SortInterface;
+use LanguageDetector\Sort\SortInterface;
 
 class Sum implements SortInterface
 {
