@@ -10,6 +10,10 @@
     "require": {
 
     },
+    "minimum-stability": "dev",
+    "require-dev": {
+        "crodas/Autoloader": "dev-master"
+    },
     "autoload": {
         "psr-0": {
             "LanguageDetector": "lib/"

@@ -36,17 +36,24 @@
 */
 namespace LanguageDetector\Format;
 
-use LanguageDetector\FormatInterface;
+use LanguageDetector\AbstractFormat;
 
-class SES implements FormatInterface
+class SES extends AbstractFileFormat
 {
+    /**
+     * {@inheritDoc}
+     */
     public function dump(Array $data)
     {
-        return serialize($data);
+        return file_put_contents($this->path, serialize($data)) > 0;
     }
 
-    public function load($content)
+    /**
+     * {@inheritDoc}
+     */
+    public function load()
     {
-        return unserialize($content);
+        $file = file_get_contents($this->path);
+        return unserialize($file);
     }
 }

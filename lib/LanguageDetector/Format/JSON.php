@@ -36,20 +36,27 @@
 */
 namespace LanguageDetector\Format;
 
-use LanguageDetector\FormatInterface;
+use LanguageDetector\AbstractFormat;
 use LanguageDetector\Config;
 
-class JSON implements FormatInterface
+class JSON extends AbstractFileFormat
 {
+    /**
+     * {@inheritDoc}
+     */
     public function dump(Array $data)
     {
         $data['config'] = $data['config']->export();
-        return json_encode($data);
+        return file_put_contents($this->path, json_encode($data)) > 0;
     }
 
-    public function load($bytes)
+    /**
+     * {@inheritDoc}
+     */
+    public function load()
     {
-        $object = json_decode($bytes, true);
+        $file = file_get_contents($this->path);
+        $object = json_decode($file, true);
         $object['config'] = Config::__set_state($object['config']);
         return $object;
     }

@@ -36,7 +36,33 @@
 */
 namespace LanguageDetector;
 
-interface SortInterface
+abstract class AbstractFormat
 {
-    public function sort(Array $ngrams);
+    public static function initFormatByPath($path)
+    {
+        $ext   = explode(".", $path);
+        $class = __NAMESPACE__ . '\\Format\\' . strtoupper(end($ext));
+        if (!class_exists($class)) {
+            throw new \RuntimeException("cannot find class $class");
+        }
+        $format = new $class($path);
+        if (!$format instanceof AbstractFormat) {
+            throw new \RuntimeException("{$class} must implement " . __NAMESPACE__ . "\\FormatInterface interface");
+        }
+        
+        return $format;
+    }
+
+    /**
+     * Dumps data to output using implementation-specific serialization
+     * @param array $data
+     * @return boolean
+     */
+    public abstract function dump(Array $data);
+
+    /**
+     * Loads data from source and returns the result
+     * @return array
+     */
+    public abstract function load();
 }
