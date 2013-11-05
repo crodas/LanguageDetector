@@ -114,8 +114,15 @@ class PageRank implements SortInterface
         $values   = array();
         $total = count($ngrams);
         for ($i=0; $i < $total; $i++) {
+            if (ctype_punct($ngrams[$i])) {
+                continue;
+            }
             for ($e=$i; $e < $total && $e <= $i+5; $e++) {
+                if ($i > $total || $e > $total) continue;
                 if ($ngrams[$e] == $ngrams[$i]) continue;
+                if (ctype_punct($ngrams[$e])) {
+                    break;
+                }
 
                 foreach (array($i, $e) as $id) {
                     if (empty($outlinks[ $ngrams[$id] ])) {
