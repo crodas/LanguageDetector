@@ -15,7 +15,7 @@
         "crodas/Autoloader": "~0.1"
     },
     "license": "BSD-4-Clause",
-    "version": "v0.1.6",
+    "version": "v0.1.0",
     "scripts": {
         "post-autoload-dump": "Autoloader\\Composer::generate"
     },
