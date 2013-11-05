@@ -12,7 +12,12 @@
     },
     "minimum-stability": "dev",
     "require-dev": {
-        "crodas/Autoloader": "dev-master"
+        "crodas/Autoloader": "~0.1"
+    },
+    "license": "BSD-4-Clause",
+    "version": "v0.1.0",
+    "scripts": {
+        "post-autoload-dump": "Autoloader\\Composer::generate"
     },
     "autoload": {
         "psr-0": {
