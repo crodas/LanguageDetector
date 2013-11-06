@@ -107,11 +107,11 @@ class PageRank implements SortInterface
     }
     // }}}
 
-    public function sort(Array $ngrams)
+    protected function getGraph(Array $ngrams)
     {
         $outlinks = array();
         $graph    = array();
-        $values   = array();
+        $values   = array(); 
         $total = count($ngrams);
         for ($i=0; $i < $total; $i++) {
             if (ctype_punct($ngrams[$i])) {
@@ -140,6 +140,20 @@ class PageRank implements SortInterface
                 $graph[ $ngrams[$i] ][] = $ngrams[$e];
             }
         }
+
+        return compact('graph', 'values', 'outlinks');
+    }
+
+    public function sort(Array $ngrams)
+    {
+        $_graph   = $this->getGraph($ngrams);
+        foreach (array('outlinks', 'graph', 'values') as $prop) {
+            if (empty($_graph[$prop]) || !is_array($_graph[$prop])) {
+                throw new \RuntimeException("Invalid or missing {$prop}");
+            }
+            $$prop = $_graph[$prop];
+        }
+
 
         //graph would be empty if all ngrams are the same 
         if (count($graph) === 0) {
