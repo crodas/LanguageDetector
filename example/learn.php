@@ -6,6 +6,8 @@ set_time_limit(0);
 use LanguageDetector\Config;
 use LanguageDetector\AbstractFormat;
 use LanguageDetector\Learn;
+crodas\FileUtil\File::$minPHP = '5.3.0'; // use array() instead of []
+
 
 ini_set('memory_limit', '1G');
 mb_internal_encoding('UTF-8');
@@ -20,6 +22,7 @@ foreach (glob(__DIR__ . '/samples/*') as $file) {
 $c->addStepCallback(function($lang, $status) {
     echo "Learning {$lang}: $status\n";
 });
+
 $c->save(AbstractFormat::initFormatByPath(__DIR__ . '/datafile.php'));
 $c->save(AbstractFormat::initFormatByPath(__DIR__ . '/datafile.ses'));
 $c->save(AbstractFormat::initFormatByPath(__DIR__ . '/datafile.json'));
