@@ -37,6 +37,7 @@
 namespace LanguageDetector\Format;
 
 use LanguageDetector\AbstractFormat;
+use crodas\FileUtil\File;
 
 class PHP extends AbstractFileFormat
 {
@@ -45,7 +46,7 @@ class PHP extends AbstractFileFormat
      */
     public function dump(Array $data)
     {
-        return file_put_contents($this->path, '<?php return ' . var_export($data, true) . ';') > 0;
+        return File::dumpArray($this->path, $data);
     }
 
     /**

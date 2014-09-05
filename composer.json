@@ -8,17 +8,10 @@
         }
     ],
     "require": {
-
-    },
-    "minimum-stability": "dev",
-    "require-dev": {
-        "crodas/Autoloader": "~0.1"
+        "crodas/file-util": ">=v0.1.8"
     },
     "license": "BSD-4-Clause",
     "version": "v0.1.1",
-    "scripts": {
-        "post-autoload-dump": "Autoloader\\Composer::generate"
-    },
     "autoload": {
         "psr-0": {
             "LanguageDetector": "lib/"
