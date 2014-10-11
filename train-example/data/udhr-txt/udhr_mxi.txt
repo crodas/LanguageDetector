@@ -1,0 +1,218 @@
+Universal Declaration of Human Rights - Mozarabic
+© 1996 – 2009 The Office of the High Commissioner for Human Rights
+This plain text version prepared by the “UDHR in Unicode”
+project, http://www.unicode.org/udhr.
+---
+
+Declaratione Universale de les Dretos Humanos
+      PREÀMBOLO
+      Considerando que la libertate, la ciustitia e la pace in el mondo tienent per basse la reconoscentia de la dignitate intrinseca e de les dretos eguales et inalienabeles de totos les membros de la familia humana,
+      Considerando que la desconoscentia et el menospretio de les dretos humanos hant origenato actos de crudeltates bastoflantes per la conscientia de l’humanitate; e que s’ha proclammato, commo l’aspiratione plù alzata del homme, l’advenimento d’un mondo in que les esseres humanos, libberatos del pabbore e de la miseria, fruiant de la libbertate de paràvola e de la libbertate de credentias,
+      Considerando essentiale que les dretos humanos siant protegiutos per un règime de Dreto, ciuscà l’homme non se veda compeluto al supremo recorso de la refetantia contra la tirania e l’opressione,
+      Considerando otrossi essentiale promovere la sveloppantia de relationes amicabeles intre las nationes,
+      Considerando que les pòpolos de las Nationes Adgiuntatas hant reaffirmato in la Lèttera la sua fede in les dretos fondamentales del homme, in la dignitate et el valore de la persona humana et in l’egualtate de dretos d’hommes e mulleres; e s’hant declarato resoltos a promovere el progresso sociale et ad alzare el nivele de vita dintro d’un concepto plù amplo de la libbertate,
+      Considerando que les Statos Membros s’hant compromisso ad assecurare, in cooperatione con l’Organissatione de las Nationes Adgiuntatas, el respetto universale et effectivo a les dretos e libertates fondamentales del homme, e
+      Considerando que una conceptione commune d’aquestos dretos e libertates ie de la maiore importantia per el pleno accumplimento de dito compromisso,
+      L’Assamblea Generale
+      Proclamma la presente Declaratione Universale de les Dretos Humanos commo ideale commune per aquele que totos les pòpolos e nationes devent sfortiarse, ciuscà tanto les individuos commo las institutiones, inspirandose constantemente in ela, promovant, mediante l’insegnantia e l’educatione, el respetto ad aquestos dretos e libbertates, et assecurent, per messuras progressivas de caràctere nationale et internationale, la sua reconoscentia et aplicacatione universales et effectivos, autanto intre les pòpolos de les Statos Membros commo intre aqueles de les territorios colocatos sopra la sua ciurisdictione.
+   
+      Articolo 1
+      Totos les esseres humanos nascent libberos et eguales in dignitate e dretos e, dotatos commo stant de racione e conscientia, devent comportarse in germanitate les unos con les altros.
+   
+      Articolo 2
+      Tota persona tiene les dretos e libbertates proclammatos in aquesta Declaratione, sine distintione alcuna de rasa, colore, sexo, lingua, religione, opinione politica au de qualsevuolle altra indole, origene nationale au sociale, possitione econòmica, nascentia au qualsevuolle altra conditione.
+      D’òltra, non se farà distintione alcuna fondata in la conditione politica, ciuridica aut internationale del paisse au territorio de cuia ciurisdictione dependa una persona, autanto se se traita d’un paisse independente, commo d’un territorio sopra administratione fidutiaria, non autònomo aut assommisso a qualsevuolle altra limitatione de sobberantia.
+   
+      Articolo 3
+      Toto individuo tiene dreto a la vita, a la libbertate et a la securitate de la sua persona.
+   
+      Articolo 4
+      Nencuno starà assommisso a sclavitute nen a servidumme; la sclavitute et el tràffico de sclavos stant devissas in totas las suas formas.
+   
+      Articolo 5
+      Nencuno serà assommisso a torturas nen a penalitates au traitamentos crudeles, inhumanos au degradantes.
+   
+      Articolo 6
+      Toto essere humano tiene dreto, in totas partes, a la reconoscentia de la sua personalitate ciuridica.
+   
+      Articolo 7
+      Totos sont eguales abbante la lege e tienent, sine distintione, dreto ad iguale protectione de la lege. Totos tienent dreto ad eguale protectione contra tota discrimminatione que infringia aquesta Declaratione e contra tota provocatione a tale discrimminatione.
+   
+      Articolo 8
+      Tota persona tiene dreto ad un recorso effectivo, abbante les tribunales nationales competentes, que l’alberga contra actos que violent les sieus dretos fondamentales reconosciutos per la constitutione au per la lege.
+   
+      Articolo 9
+      Nencuno poterà essere arvitrariamente detenuto, presso nen stembato.
+   
+      Articolo 10
+      Tota persona tiene dreto, in conditiones de plena egualtate, ad essere auduta publicamente e con ciustitia per un tribunale independente et imparciale, per la determinatione de les sieus dretos et obligationes au per l’examene de qualsevuolle accussatione contra ela in materia penale.
+   
+      Articolo 11
+      
+         
+            Tota persona accussata de linentia tiene dreto a que se presomma la sua innocentia mentrestanto non se prove la sua culpabilitate, conformo a la lege et in ciudicio publico in aquele que lui hagia assecurato totas las garantias necessarias per la sua defensa.
+         
+         
+            Nencuno serà condenato per actos aut ommissiones que in el momento de commetirse non foront delictivos secòndo el Dreto nationale aut internationale. Nenque s’impossarà penalitate plù grave que l’aplicabele in el momento de la commissione de la linentia.
+         
+      
+   
+      Articolo 12
+      Nencuno serà obgecto d’ingerentias arvitrarias in la sua vita privata, la sua familia, el sieu domicilio au la sua correspondentia, nen d’attaccos a la sua honra aut a la sua reputatione. Tota persona tiene dreto a la protectione de la lege contra tales ingerentias aut attaccos.
+   
+      Articolo 13
+      
+         
+            Tota persona tiene dreto a circolare libberamente et ad elegire la sua residentia in el territorio d’un Stato.
+         
+         
+            Tota persona tiene dreto a partire de qualsevuolle paisse, inclosso del pròpio, et a retornare al sieu paisse.
+         
+      
+   
+      Articolo 14
+      
+         
+            In caso de persecutione, tota persona tiene dreto a recercare assilo, et a fruire d’ele, in qualsevuolle paisse.
+         
+         
+            Aqueste dreto non poterà essere invocato contra una actione ciudiciale veramente origenata per linentias communes au per actos oppostos a les propòssitos e principios de las Nationes Adgiuntatas.
+         
+      
+   
+      Articolo 15
+      
+         
+            Tota persona tiene dreto ad una nationalitate.
+         
+         
+            A nencuno se privarà arvitrariamente de la sua nationalitate ne del dreto a cambiare de nationalitate.
+         
+      
+   
+      Articolo 16
+      
+         
+            Les hommes e las mulleres, a partire de l’etate nubile, tienent dreto, sine restrictione alcuna per motivos de rasa, nationalitate au religione, a spossarse e fondare una familia; e fruirarànt d’eguales dretos in cuanto al matrimonio, durante el matrimonio et in caso de disolutione del matrimonio.
+         
+         
+            Tantamente mediante libbero e pleno acconsentimento de les futuros spossos poterà contraderse el matrimonio.
+         
+         
+            La familia ie l’elemento naturale e fondamentale de la societate e tiene dreto a la protectione de la societate e del Stato.
+         
+      
+   
+      Articolo 17
+      
+         
+            Tota persona tiene dreto a la propietate, individuale e colectivamente.
+         
+         
+            Nencuno serà privato arvitrariamente de la sua propietate.
+         
+      
+   
+      Articolo 18
+      Tota persona tiene dreto a la libbertate de pensamento, de conscientia e de religione; aqueste dreto include la libertate de cambiare de religione au de credentia, ansi commo la libertate de manifestare la sua religione au la sua credentia, individuale e colectivamente, autanto in publico commo in privato, per l’insegnantia, la pràctica, el culto e l’observantia.
+   
+      Articolo 19
+      Toto individuo tiene dreto a la libbertate d’opinione e de spressione; aqueste dreto include aquele de non essere amoiato per more de las suas opiniones, aquele d’investigare e recevere informationes et opiniones, et aquele de diffondirlas, sine linzos de frontieras, per qualsevuolle more de spressione.
+   
+      Articolo 20
+      
+         
+            Tota persona tiene dreto a la libbertate d’adgiuntamento e d’associationes pacificas.
+         
+         
+            Nencuno poterà essere obligato a pertenire ad una associatione.
+         
+      
+   
+      Articolo 21
+      
+         
+            Tota persona tiene dreto a participare in el governo del sieu paisse, directamente au per more de representantes libberamente scollutos.
+         
+         
+            Tota persona tiene el dreto d’accesso, in conditiones d’egualtate, a las fontiones publicas del sieu paisse.
+         
+         
+            La voluntate del pòpolo ie la basse de l’autoritate de la potentia publica; aquesta voluntate se spressarà mediante electiones autènticas que abberànt de celebrarse periòdicamente, per sofragio universale et eguale e per voto secreto aut altro procedimento equivalente que garantisse la libbertate del voto.
+         
+      
+   
+      Articolo 22
+      Tota persona, commo membro de la societate, tiene dreto a la securitate sociale, et ad obtenire, mediante lo sfortio nationale e la cooperatione internationale, abbuta cunta de l’organissatione e les recorsos de cada Stato, la satisfactione de les dretos econòmicos, sociales e culturales, indispensables a la sua dignitate et a la libbera sveloppantia de la sua personalitate.
+   
+      Articolo 23
+      
+         
+            Tota persona tiene dreto al travallo, a la libbera electione del sieu travallo, a conditiones equitativas e satisfactorias de travallo et a la protectione contra el ciomboro.
+         
+         
+            Tota personale tiene dreto, sine discrimminatione alcuna, ad eguale salario per travallo eguale.
+         
+         
+            Tota persona que travalla tiene dreto ad una remuneratione equitativa e satisfactoria, que lui assecure, ansi commo a la sua familia, una existentia conformo a la dignitate humana e que serà completata, in caso necessario, per qualsevuolle altros mores de protectione sociale.
+         
+         
+            Tota persona tiene dreto a fondare sindicatos et a sindicarse per la defensa de les sieus interesses.
+         
+      
+   
+      Articolo 24
+      Tota persona tiene dreto al sbanollamento, al fruimento del tempo libero, ad una limitatione racionabele de la duratione del travallo et a vacantias periòdicas pagatas.
+   
+      Articolo 25
+      
+         
+            Tota persona tiene dreto ad un nivele de vita adequato que lui assecure, ansi commo a la sua familia, la salute et el benestare, et in speciale l’alimentatione, el vestimento, el domo, l’assistentia mèdica e les servitios sociales necessarios; tiene altrotale dreto a las securantias in caso del ciomboro, malatia, invalidessa, viuvessa, vellessa et altros casos de perdentias de les sieus mores de sobsistentia per circonstantias independentes de la sua voluntate.
+         
+         
+            La maternitate e l’infantia tienent dreto a custidantias et assistentias speciales. Totos les fillos, natos de matrimonio au fuora de matrimonio, tienent dreto ad eguale protectione sociale.
+         
+      
+   
+      Articolo 26
+      
+         
+            Tota persona tiene dreto a l’educatione. L’educatione deve essere gratuita, almeno in lo concernente a l’instructione elementale e fondamentale. L’instructione elementale serà obligatoria. L’instructione tècnica e professionale abberà d’essere generalissata; l’acceso a les studios superiores serà eguale per totos, in fontione de les mèritos respectivos.
+         
+         
+            L’educatione tenirà per obgecto la plena sveloppantia de la personalitate humana et el fortalessamento del respetto a les dretos humanos et a las libbertates fondamentales; favorescerà la comprensione, la tolerantia e l’amistate intre totas las nationes e totos les grupos ètnicos au religiosos; e promoverà la sveloppantia de las activitates de las Nationes Adgiuntatas per el mantenimento de la pace.
+         
+         
+            Les padres tenirànt dreto preferente a scollere el tipo d’educatione que abberà de darse a les sieus fillos.
+         
+      
+   
+      Articolo 27
+      
+         
+            Tota persona tiene dreto a tollare parte libberamente in la vita culturale de la communitate, a gaudire de las artes et a participare in el progresso cientifico et in les benefitios que d’ele resultent.
+         
+         
+            Tota persona tiene dreto a la protectione de les interesses morales e materiales que lui correspondant per racione de las productiones cientificas, literarias aut artisticas de que sia autora.
+         
+      
+   
+      Articolo 28
+      Tota persona tiene dreto a que se stabila una òrdene sociale et internationale in aquele que les dretos e libbertates proclammatos in aquesta Declaratione se fagiant plenamente effectivos.
+   
+      Articolo 29
+      
+         
+            Tota persona tiene deveres respecto a la communitate, poscà tantamente in ela pote sveloppare libbere e plenamente la sua personalitate.
+         
+         
+            In l’escercitio de les sieus dretos et in el fruimento de las suas libertates, tota persona starà sòlamente sogecta a las limitationes stablertas per la lege con l’unico fine d’assecurare veramente la reconoscentia et el respetto de les dretos e libbertates del resto, e de satisfacere las ciustas exigentias de la morale, de l'òrdene publico e del benestare generale in una societate democràtica.
+         
+         
+            Aquestos dretos e libertates non poterànt in nencuno caso essere escerciutos in oppossitione a les propòssitos e principios de las Nationes Adgiuntatas.
+         
+      
+   
+      Articolo 30
+      Nula in la presente Declaratione poterà interpretarse in el senso de que confere dreto alcuno al Stato, ad un grupo aut ad una persona, per prendere et sveloppare activitates au realissare actos tendentes a la supressione de qualsevuolle de les dretos.
+   

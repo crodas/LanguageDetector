@@ -22,7 +22,7 @@ class AssertTest extends \phpunit_framework_testcase
      */
     public function testAll($format, $file, $expected)
     {
-        $detect = LanguageDetector\Detect::initByPath(__DIR__."/../example/datafile.{$format}");
+        $detect = LanguageDetector\Detect::initByPath(__DIR__."/../train-example/datafile.{$format}");
         $lang = $detect->detect(file_get_contents($file));
         if (is_array($lang)) {
             $this->assertEquals($expected, $lang[0]['lang']);
@@ -36,7 +36,7 @@ class AssertTest extends \phpunit_framework_testcase
      */
     public function testGetLanguages($format)
     {
-        $detect = LanguageDetector\Detect::initByPath(__DIR__."/../example/datafile." . $format);
+        $detect = LanguageDetector\Detect::initByPath(__DIR__."/../train-example/datafile." . $format);
         $langs = $detect->getLanguages();
         $this->assertTrue(is_array($langs));
         $this->assertTrue(count($langs) > 10);

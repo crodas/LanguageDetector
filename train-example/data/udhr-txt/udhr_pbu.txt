@@ -1,0 +1,9 @@
+Universal Declaration of Human Rights - Pashto, Northern
+© 1996 – 2009 The Office of the High Commissioner for Human Rights
+This plain text version prepared by the “UDHR in Unicode”
+project, http://www.unicode.org/udhr.
+---
+
+[??]
+      [??]
+      د بشر ټول افراد آزاد نړۍ ته راځی او د حيثيت او حقوقو له پلوه سره برابر دی. ټول د عقل او وجدان خاوندان دی او يو له بل سره د ورورۍ په روحيې سره بايد چلند کړی.

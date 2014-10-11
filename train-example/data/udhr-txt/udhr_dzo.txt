@@ -1,0 +1,9 @@
+Universal Declaration of Human Rights - Dzongkha
+© 1996 – 2009 The Office of the High Commissioner for Human Rights
+This plain text version prepared by the “UDHR in Unicode”
+project, http://www.unicode.org/udhr.
+---
+
+
+    འགྲོ་བ་མི་རིགས་ག་ར་དབང་ཆ་འདྲ་མཏམ་འབད་སྒྱེཝ་ལས་ག་ར་གིས་གཅིག་གིས་གཅིག་ལུ་སྤུན་ཆའི་དམ་ཚིག་བསྟན་དགོ།
+  

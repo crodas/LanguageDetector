@@ -1,0 +1,222 @@
+Universal Declaration of Human Rights - Scots
+© 1996 – 2009 The Office of the High Commissioner for Human Rights
+This plain text version prepared by the “UDHR in Unicode”
+project, http://www.unicode.org/udhr.
+---
+
+Universal Declaration o Human Richts
+    Adoptit and proclaimed by General Assemlie resolution 217A (III) o 10 December 1948.
+    On December 10, 1948 the General Assemlie o the Unitit Nations adoptit and proclaimed the Universal Declaration o Human Richts shawn hereablo in its ful text. Efter this historic act the Assemlie cried on aw Member States tae publicise the text o the Declaration and tae gar it be disseminatit, displayed, read and exponed principally in scuils and ither learning institutions, wi nae distinction on grunds o the political status o countries or territours.
+  
+    Inning
+    Forsameikle as kenning for the inherent dignity and for the richts, equal and nane-alienable, o aw members o the human faimily is the foond o freedom, justice and peace in the warld,
+    Forsameikle as misregaird and contemption for human richts hes resultit in barbour acts that hes scunnert the conscience o mankind, and the advent o a warld whaur aw human sowels enjoys freedom o thocht and speech, and quittance frae dearth and dreid hes been proclaimed the tapmaist aspiration o the commonty,
+    Forsameikle as it is necessar, gin man be no gart tak recourse tae rebellion as a hinmaist resort conter tirannie and dounhaudenment, that human richts shuld be beildit by the rule o law,
+    Forsameikle as it is necessar tae gar freendly relations atween nations aye win forrit,
+    Forsameikle as the peoples o the Unitit Nations hes in the Chairter affirmit aince mair their faith in fundamental human richts, in the dignity and worth o the human person and in the equal richts o men and wemen and hes resolved tae promote social progress and better standarts o life in braider freedom,
+    Forsameikle as Member States hes gien their hecht tae win, in compluterance wi the Unitit Nations, the promotion o universal tent and respect for human richts and fundamental freedoms,
+    Forsameikle as a common understaunding o thir richts and freedoms is o the greatest importance for the ful kenning o this hecht,
+    Nou, syne,
+    The General Assemlie
+    Proclaims this Universal Declaration o Human Richts as a common standart o achievement for aw peoples and aw nations, tae the end that ilka individual and ilka organ o society, aye haudan in mind this Declaration, shal ettle throu teaching and lear tae promote respect for thir richts and freedoms and throu progressive meisures, national and international, mak sover their universal and effective kenning and tenting, baith amang the folk o the Member States theirsels and amang the folk o territours in ower their jurisdiction.
+  
+    Airticle 1
+    Aw human sowels is born free and equal in dignity and richts. They are tochered wi mense and conscience and shuld guide theirsels ane til ither in a speirit o britherheid.
+  
+    Airticle 2
+    Awbody is entitelt til aw the richts and freedoms furthset in this Declaration wi nae distinction o ony kind, sic as race, colour, gender, language, religioun, political or ither opinioun, national or social origin, gear, birth or ither status.
+    Mair, nae distinction shal be made on the grunds o the political, jurisdictional or international status o the countrie or territour a bodie belangs, whuther it be staund-alane, trust, nane-self-governing or in ower ony ither haims o soverantie.
+  
+    Airticle 3
+    Awbody hes the richt tae life, liberty and security o person.
+  
+    Airticle 4
+    Naebody shal be hauden in thirldom or slavery; slavery and the slave trade shal be prohibit in aw their forms.
+  
+    Airticle 5
+    Naebody shal be gart thole torture nor ill-kindit, inhuman nor bemeanan treatment nor punishment.
+  
+    Airticle 6
+    Awbody hes the richt awgaits tae kenning as a person afore the law.
+  
+    Airticle 7
+    Aw are equal afore the law and entitelt wi nae distinction tae equal beilding o the law. Aw are entitelt tae equal beilding conter ony discrimination in skaith o this Declaration and conter ony incitement tae sic discrimination.
+  
+    Airticle 8
+    Awbody hes the richt til an effective remeid aff o the competent national tribunals for acts that daes skaith til the fundamental richts grantit him o the constitution or by law.
+  
+    Airticle 9
+    Naebody shal be gart thole wulsome arrest, detention nor exile.
+  
+    Airticle 10
+    Awbody is entitelt in ful equality til a fair and public hearing frae a staund-alane and even-haundit tribunal in the determination o his richts and duties and o ony criminal chairge conter him.
+  
+    Airticle 11
+    
+      
+        Awbody chairged wi a penal faut hes the richt tae be thocht innocent til pruved guilty conformand til law in a public trial whaur he hes haen aw the warranties necessar for his defence.
+      
+      
+        Naebody shal be taen as guilty o ony penal faut on accoont o ony act or omission that didna mak for a penal faut, in ower national or international law, at the time whan it wes committit. Nor shal a penalty be imposed hivvier nor the ane that wes applicable at the time the penal faut wes commitit.
+      
+    
+  
+    Airticle 12
+    Naebody shal be gart thole wulsome intromission wi his privacy, faimily, hame or letters, nor tae onsets upon his honour and repute. Awbody hes the richt tae the beild o the law conter sic intromission or onsets.
+  
+    Airticle 13
+    
+      
+        Awbody hes the richt tae freedom o traivel and residence ben the mairches o aw States.
+      
+      
+        Awbody hes the richt tae win awa frae ony countrie, includin his ain, and tae win back til his countrie.
+      
+    
+  
+    Airticle 14
+    
+      
+        Awbody hes the richt tae seek and tae enjoy in ither countries asylum frae persecution.
+      
+      
+        This richt mayna be cried on in the case o prosecutions genuinely arisan ower the heids o nonpolitical crimes or o acts contrair til the purposes and principles o the Unitit Nations.
+      
+    
+  
+    Airticle 15
+    
+      
+        Awbody hes the richt til a nationality.
+      
+      
+        Naebody shal be wulsomely twined o his nationality nor disalloued the richt tae chynge his nationality.
+      
+    
+  
+    Airticle 16
+    
+      
+        Men and wemen o ful age, wi nae ony branks on accoont o race, nationality or religioun, hes the richt tae mairry and foond a faimily. Entitelt they are tae equal richts anent mairrage, oot throu mairrage and at its upbrak.
+      
+      
+        Mairrage shal be gane intil wi the free and ful consent alane o the intendin marras.
+      
+      
+        The faimily is the naitural and fundamental group unit o society and is entitelt tae the beild o society and the State.
+      
+    
+  
+    Airticle 17
+    
+      
+        Awbody hes the richt tae awn gear his lane as weel as in commonty.
+      
+      
+        Nane shal be wulsomely twined o his gear.
+      
+    
+  
+    Airticle 18
+    Awbody hes the richt tae freedom o thocht, conscience and religioun; this richt includes the freedom tae chynge his religioun or belief, and freedom, aither his lane or in commonty and in public or in quietie, tae witness his religioun or belief in teaching, practick, worship and observance.
+  
+    Airticle 19
+    Awbody hes the richt tae freedom o opinioun and expression; this richt includes freedom tae haud opiniouns wi nae intermeddling and tae seek, come by and gie oot wittings and conceits throu ony media and tentless o frontiers.
+  
+    Airticle 20
+    
+      
+        Awbody hes the richt tae freedom o peacefu forgethering and association.
+      
+      
+        Nane may be gart belang an associe.
+      
+    
+  
+    Airticle 21
+    
+      
+        Awbody hes the richt tae tak a haund in the government o his countrie, directly or throu representatives freely waled.
+      
+      
+        Awbody hes the richt til equal access tae public service in his countrie.
+      
+      
+        The wull o the people shal be the grunds o the authoritie o government; this wull shal be expressed in periodic and jonick elections that shal be by universal and equal suffrage and shal be hauden by secret vote or by the like free voican procedures.
+      
+    
+  
+    Airticle 22
+    Awbody, as a member o society, hes the richt tae social security and is entitelt tae realisation, throu national darg and international compluterance and confeerin til the organisation and fends o ilka State, o the economic, social and cultural richts that maun be haen for his dignity and the free development o his personality.
+  
+    Airticle 23
+    
+      
+        Awbody hes the richt tae hae wark, free choice o employ, fair and guid tids o wark, and security gin wark gaes wantin.
+      
+      
+        Awbody, wi nae ony discrimination, hes the richt tae equal pey for equal wark.
+      
+      
+        Awbody in wark hes the richt tae fair and guid pey that maks siccar for himsel and his faimily an existence worthy o human dignity, and hae it eikit til, if necessar, wi ither means o social beild.
+      
+      
+        Awbody hes the richt tae mak and tae jyne trade unions for the beild o his interests.
+      
+    
+  
+    Airticle 24
+    Awbody hes the richt tae saucht and leisure, includin wyce stents on wark-oors and periodic time aff wi pey.
+  
+    Airticle 25
+    
+      
+        Awbody hes the richt til a standart o life fit for the guid-heal and weel-daean o himsel and his faimily, includin meat, claes, hoosing and medical care as weel as necessar social services and the richt tae security in the event o job loss, seikness, disability, wedowheid, auld eild or ither want o fends in circumstances oot o his pouer.
+      
+      
+        Mitherheid and bairnheid is entitelt tae special tent and assistance. Aw childer, whuther born in or oot o wadlock, shal enjoy the samelike social beild.
+      
+    
+  
+    Airticle 26
+    
+      
+        Awbody hes the richt tae learning. Learning shal be free, at least in the elementar and foondin stages. Elementar learning shal be compelt. Technical and professional learning shal be made generally available and secondar learning shal be available tae aw equal like on grunds o merit.
+      
+      
+        Learning shal be airtit at the ful development o the human personality and at the steivening o respect for human richts and fundamental freedoms. It shal promote understaunding, toleration and freendship amang aw nations, racial or religious groups, and shal gar the purposes o the Unitit Nations win forrit in the uphauding o peace.
+      
+      
+        Parents hes a prior richt tae wale the kind o lear that shal be gien til their bairns.
+      
+    
+  
+    Airticle 27
+    
+      
+        Awbody hes the richt tae tak pairt freely in the cultural life o the commonty, tae enjoy the airts and tae share in the advancement o science and its benefits.
+      
+      
+        Awbody hes the richt til the haining o the moral and material interests that results frae ony scientific, literary or airtistic production he is the makar o.
+      
+    
+  
+    Airticle 28
+    Awbody is entitelt til a social and international order in the whilk the richts and freedoms furthset in this Declaration can kythe in ful.
+  
+    Airticle 29
+    
+      
+        Awbody hes duties tae the commonty in the whilk alane the free and ful development o his personality is possible.
+      
+      
+        In the exercise o his richts and freedoms, awbody shal thole nae mair nor whit branks are determined by law for the ae purpose o makand the due kenning and respect for the richts and freedoms o ithers and the meeting o the just needs o morality, public order and the common weill in a democratic society siccar.
+      
+      
+        Thir richts and freedoms can niver in nae case be exercised conter the purposes and principles o the Unitit Nations.
+      
+    
+  
+    Airticle 30
+    Nocht in this Declaration may be interpret as allouin for ony State, group or person ony richt tae tak pairt in ony ploy or perform ony act ettled at the cowping o ony o the richts and freedoms herein furthset.
+  

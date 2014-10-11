@@ -1,0 +1,220 @@
+Universal Declaration of Human Rights - Sorbian, Upper
+© 1996 – 2009 The Office of the High Commissioner for Human Rights
+This plain text version prepared by the “UDHR in Unicode”
+project, http://www.unicode.org/udhr.
+---
+
+Powšitkowne wozjewjenje čłowjećich prawow
+      Zjednoćenych narodow wot 10. 12. 1948
+   
+      Preambla
+      Dokelž twori płipóznaće wšěm čłonam čłowjeskeje swójby płisłušaceje dostojnosće a jich jenakich a njeparujomnych prawow zakład swobody, sprawnosće a měra w swěće,
+      dokelž stej njedopóznaće a znajechanje čłowječich prawow k aktam barbarstwa wjedłoj, kotrež su swědomje člowjestwa hłuboko zranili, a dokelž je so wutworjenje swěta, w kotrymž spožči so člowjekam, swobodnym wot stracha a nuzy, swoboda rěčenja a wěry, jako najwyše prócowanje čłowjestwa wozjewiło,
+      dokelž je bytostne, člowječe prawa z knjejstwom prawa škitać, zo njeby so čłowjek k zběžkej płećiwo tyranstwu a potłóčowanju jako poslednjemu srědkej nuzował,
+      dokelž je bytostne, wuwiće płećelskich poćahow mjez narodami spěchować,
+      dokelž su ludy Zjednoćenych narodow we wustawkach znowa swoju wěru do zakładnych čłowječich prawow, do dostojnosće a hódnoty čłowjeskeje wosoby a do runoprawosće muža a žony wobkrućili a wobzamknyli, socialny postup a lěpše žiwjenske poměry płi wjetšej swobodźe spěchować,
+      dokelž su so sobustawske staty zawjazali, w zhromadnym dźěle ze Zjednoćenymi narodami powšitkowne respektowanje a zwoprawdźenje člowječich prawow a zakładnych swobodow płesadźić,
+      dokelž je zhromadne měnjenje wo tutych prawach a swobodach płewšo wažne za połne spjelnjenje tutoho zawjazka,
+      proklamuje Generalna zhromadźizna
+      tute Powšitkowne wozjewjenje člowjecičh prawow jako zhromadny ideal, kotryž ma so wot wšěch ludow a narodow docpěć, zo bychu kóždy jednotliwc a wšě organy towaršnosće tute wozjewjenje stajnje w pomjatku měli a so prócowali, płez wučbu a kubłanje respektowanje tutych prawow a swobodow spěchować a płez postupowace naprawy w narodnym a mjezynarodnym wobłuku jich powšitkowne a faktiske płipóznaće a zwoprawdźenje pola wobydlerstwa kaž sobustawskich statow tak tež tych jich nadknjejstwu podstejacych teritorijow zaručeć.
+   
+      Artikl 1
+      Wšitcy čłowjekojo su wot naroda swobodni a su jenacy po dostojnosći a prawach. Woni su z rozumom a swědomjom wobdarjeni a maja mjezsobu w duchu bratrowstwa wobchadźeć.
+   
+      Artikl 2
+      Kóždy je woprawnjeny, w tutym wozjewjenju proklamowane prawa a swobody wužiwać, a to bjez kóždehožkuli rozeznawanja, kaž po rasy, barbje, splahu, rěči, religiji, politiskim abo druhim płeswědčenju, narodnym abo socialnym pochadźe, po zamóženju, narodźe abo druhim statusu .
+      Dale njesmědźa so žane rozdźěle činić na zakładźe politiskeje, prawniskeje abo mjezynarodneje pozicije kraja abo teritorija, kotremuž wosoba płisłuša, njedźiwajo na to, hač je njewotwisny, hač pod rukowaćelstwom steji, hač njewobsedźi swójske knježerstwo abo hač podleži někajkemu druhemu wobmjezowanju swojeje suwerenity.
+   
+      Artikl 3
+      Kóždy ma prawo na žiwjenje, swobodu a wěstotu wosohy.
+   
+      Artikl 4
+      Nichtó njesmě so w njewólnistwje abo roboćanstwje dźeržeć; njewólnistwo a wikowanje z njewólnikami stej we wšěch swojich formach zakazanej.
+   
+      Artikl 5
+      Nichtó njesmě so podćisnyć ćwělowanju abo surowemu, nječłowjeskemu abo ponižowacemu wobchadźenju abo chłostanju.
+   
+      Artikl 6
+      Kóždy ma prawo, wšudźe jako prawakmany płipóznaty hyć.
+   
+      Artikl 7
+      Wšitcy čłowjekojo su płed zakonjom runi a maja b jez diskriminaeije prawo na jenaki škit płez zakoń. Wšitey maja pawo na jenaki škit płećiwo kóždej diskriminaciji, kotraž by płedležace wozjewjen je zraniła, a płećiwo pozbudźen ju k tajkej diskriminaciji.
+   
+      Artikl 8
+      Kóždy ma prawo na skutkownu juristisku pomoe pola płisłušnych nutłkostatnych sudnistwow płećiwo jednanjam, kotrež jeho jemu po wustawje abo po zakonju płistejace zakładne prawa ranja.
+   
+      Artikl 9
+      Nichtó njesmě so swojowólnje zajeć w jatbje dźržeć abo z kraja wupokazać.
+   
+      Artikl 10
+      Kóždy ma w połne; runoprawosći prawo na to, zo so wo jeho prawaćh a winowatosćach a wo kóždej płećiwo njemu zapoloženj; chłostanskoprawnej skóržbje płez njewotwisne a njestronske sudnistwo sprawnje a zjawnje jedna.
+   
+      Artikl 11
+      
+         
+            Kóždy chłostajomneho jednanja dla wobskorženy ma prawo na to, jako n jewinowaty plaćić, dołhož njeje jeho wina w zjawnynl jednanju, w kotrymž je wšě za swoje zakitowanje trěbne garantije mět, wotpowědujo zakon jej dopokazana
+         
+         
+            Nichtó njesmě so dla jednanja abo zanjechnanja něčeho zasudźić, štož njebě w času, hdyž je so to stało, po nutłkokrajnym abo po mjezynarodnym prawje chłostajomne. Runje tak njesmě so žane ćeše chłostan je wuprajič hač te w času chłostajolnneho jednanja płihrožene chłostanje.
+         
+      
+   
+      Artikl 12
+      Nichtó njesmě swojowólnym zapłimnjenjam do swojeho priwatneno žiwjenja, swojeje swójby, swojeho bydlenja a swojeje korespondency abo njezakonskim škodam swojeje česće a swojeho mjena wustajeny być. Kóždy ma prawo na juristiski škit płećiwo tajkim zapłimnjenjam a škodam.
+   
+      Artikl 13
+      
+         
+            Kóždy ma prawo, so znutłka slata swobodnje pohibować a sej swoje bydlenje swobodnje wuzwolić.
+         
+         
+            Kóždy ma prawo, kóždy kra; inkluziwn je swój swójski kraj wopušcić a so do swojeho kraja wróćić.
+         
+      
+   
+      Artikl 14
+      
+         
+            Kóždy ma prawo, w drunich krajach płed płesćěhanjom azyl pytać a wužiwać.
+         
+         
+            Tute prawo njemóže so wužiwać w padźe płesćěhanja dla ryzy njepolitiskicn złóstnistwow abo jednanjow, kotrež ranja cile a zasady Zjednoćenycn narodow.
+         
+      
+   
+      Artikl 15
+      
+         
+            Kóždy ma prawo na statnu płisłušnosć.
+         
+         
+            Nikomu njesmě so jeho statna płisłušnosć swojowólnje sćazać ani zaprajić prawo, swoju statnu płisłušnosć změnić.
+         
+      
+   
+      Artikl 16
+      
+         
+            Mužojo a žony w žeńtwykmanej starobje maja bjez wobmjezowanja na zakładźe rasy, statne je płisłušnosće abo religije prawo, do mandželstwa .stupić a swójbu založić.
+         
+         
+            Woni maja jenake prawa płi zmandźelenju, w mandźelstwje a płi rozwjazanju mandźelstwa.
+         
+         
+            Zmandźelenje smě so jenož w swobodnej a dospołnej płezjednosći płichodneju mandźelskeju stać.
+         
+      
+   
+      Artikl 17
+      
+         
+            Kóždy ma prawo, sam abo zhromadnje z druhimi wobsydstwo měć.
+         
+         
+            Nichtó njesmě swojowólnje swoje wobsydstwo zhubić.
+         
+      
+   
+      Artikl 18
+      Kóždy ma prawo na swobodu myslow, swědomja a religije; tute prawo wopłija swobodu, swoju religiju a swój swětonahlad změnić, kaž tež swobodu, swoju religiju abo swój swětonahlad sam abo w znromadnosći z drunimi, zjawnje abo priwatnje płez wučbu, praktikowanje, božu službu a wobkedžbowanjc nabožnych naložkow zwuraznić.
+   
+      Artikl 19
+      Kóždy ma prawo na swobodu měnjenja a wuprajenje měnjenja tute prawo wopłija njehaćenu swobodu měnjenja a swobodu, sej njedźiwajo na statne hranicy informacije a ideje ze srědkami kóždehožkuli razu wobstarać, płijimować a dale dawać.
+   
+      Artikl 20
+      
+         
+            Kóždy ma prawo na swobodu zhromadźnja a zjednoćenja za měrliwe zaměry.
+         
+         
+            Nichtó n jesmě so nuzowač, zjednoćenstwu płisłušeć.
+         
+      
+   
+      Artikl 21
+      
+         
+            Kóždy ma prawo, so płi rjadowanju zjawnych naležnosćow swojeho kraja njeposrědnje abo płez swobodnje wolenycn zastupjerjow wobdźělić.
+         
+         
+            Kóždy ma pod jenakimi wuměnjenjemi prawo na płistup k zjawnym zastojnstwam w swojim kraju.
+         
+         
+            Wola ludu twori zakład za awtoritu zjawneje mocy; tuta wola dyrbi so zwuraznić płez so wospjetowace, woprawdźite, powšitkowne a rune wólby, kotrež wotměwaja so z tajnym wotedaćom hłosow abo po tomu runohódnym swobodnym wólbnym modusu.
+         
+      
+   
+      Artikl 22
+      Kóždy ma jako čłon towaršnosće prawo na socialnu wěstotu a móže płez nutłkostatne naprawy a mjezynarodne zhromadne dźěło wobkedźbujo organizaciju a pomocne srědki kóždeho stata wužiwać za swoju dostojnosć a swobodne wuwiće swojeje wosobiny njeparujomne hospodarske, socialne a kulturne prawa
+   
+      Artikl 23
+      
+         
+            Kóždy ma prawo na dźělo, na swobodnu wólbu powołanja, na płiměrjene a spokojace dźělowe wuměnjenja kaž tež na škit płećiwo bjezdźěłnosći.
+         
+         
+            Wšitcy čłowjekojo maja bjcz kóždeje diskriminacije prawo na jenaku mzdu za jenake dźěło.
+         
+         
+            Kóždy, kiž dźěła, ma prawo na sprawne a płihódne zarunanje dźěła, kotrež jemu a jeho swójbje čłowjeskej dostojnosći wotpowědowacu eksistencu zawěsća a kotrež ma so, jeli trjeba, z druhimi socialnymi škitnynli naprawami dopjelnić.
+         
+         
+            Kóždy ma prawo, za škit swojich zajimow dźěłarnistwa załoźić a tajkim płistupić.
+         
+      
+   
+      Artikl 24
+      Kóždy ma prawo na dźěłowe płestawki a swobodny čas inkluziwnje płiměrjene wobmjezowanje dźěloweho časa kaž tež na prawidłowny płaćeny dowol.
+   
+      Artikl 25
+      
+         
+            Kóždy ma prawo na za swo ju strowotu a derjeměće a tu swojeje swójby płiměrjeny žiwjenski standard, inkluziwnje dosahace zežiwjenje, drasćenje, bydlenje, lěkarske zastaranje a trěbne socialne posłužby, kaž tež dale prawo na wěstotu w padźe bjezdźěłnosće, chorosće, inwalidity, zwudowjenja staroby abo druheje straty swojich zežiwjenskich srědkow płez njezawinowane wobstejnosće.
+         
+         
+            Maćerje a dźěći maja prawo na wosebitu pomoc a podpěru. Wšěm dźěćom, mandźelskim a njemandźelskim, płisteji jenaki socialny škit.
+         
+      
+   
+      Artikl 26
+      
+         
+            Kóždy ma prawo na kubłanje. Wučba dyrbi znajmjeńša w elementarnym abo zakładnym schodźenku darmotna być. Elementarna wučba je obligatoriska. Fachowo- a powołanskošulska wučba dyrbi powšitkownje płistupna być, a wysokošulska wučba dyrbi wšěm wotpowědnje jich kmanosćam na jenake wašnje wotewrjena być.
+         
+         
+            Kublanje dyrbi na połne rozwiće čłowjeskeje wosobiny a na sylnjenje respektowanja čłowječich prawow a zakładnycn swobodow wusměrjene być. Wone dyrbi zrozumjenje, tolerancu a płećelstwo mjez wšěmi ludami a wšěmi rasowymi abo nabožnymi skupinami spěchowac a dźěławosć Zjednoćenycn narodow za zdźerženje měra podpěrować.
+         
+         
+            Starši maja prěnjorjadne prawo družinu kubłanja wuzwolić, kotrež ma so jich dźěćom posrědkować.
+         
+      
+   
+      Artikl 27
+      
+         
+            Kóždy ma prawo, so na kulturnym žiwjenju zhronladnosće swobodnje wobdźěleć, so nad wuměłstwami wjeselić a na wědomostnym postupje a jeho wudobyćacn dźěl brać.
+         
+         
+            Kóždy ma prawo na škit duchownych a matericelnych zajimow, kotrež wurostuja za njeho jako tworićela z dźěłow wědomosće, literatury abo wuměłstwa.
+         
+      
+   
+      Artikl 28
+      Kóždy ma prawo na socialny a mjezylnarodny porjad, w kotrymž móža so w tutym wozjewjenju wuprajene prawa a swobody połnje zwoprawdźić.
+   
+      Artikl 29
+      
+         
+            Kóždy ma winowatosće napłećo tej zhromadnosći, w kotrejž je jeničce móžne swobodne a połne wuwiće jeno wosobiny.
+         
+         
+            Kóždy podleži płi wužiwanju swojich prawow a swobodow jenož tym wobmjezowanjam, kotrež zakoń jeničce za tón zaměr płedwidźi, płipóznaće a respektowanje prawow a swobodow druhich zawěsćić a sprawnym žadanjam moralki, zjawneno porjada a powšitkowneho derjeměća w demokratiskej towaršnosći wotpowědować.
+         
+         
+            Tute prawa a swobody njesmedza so w žanym padźe w napłećiwku k cilam a zasadam Zjednoćenych narodow wužiwać.
+         
+      
+   
+      Artikl 30
+      Ničo w tutym wozjewjenju njesmě so do toho směra wułozować, zo so za stat, za skupinu abo wosobu prawo stwori, tajke dźěło wukonjeć abo tajki skutk zwoprawdźić, kiž so na wotstronjenje w tutym wozjewjen ju wuprajenycn prawow a swobodow měritej.
+   
