@@ -93,7 +93,7 @@ class Learn
             $data = array();
             $sorted = $sort->sort($parser->get($text));
             foreach (array_splice($sorted, 0, $max) as $ngram => $score) {
-                $data[$ngram] = array('pos' => $pos++, 'score' => $score);
+                $data[$ngram] = array($pos++, $score);
             }
             $this->output[$lang] = $data;
             if ($callback) {
