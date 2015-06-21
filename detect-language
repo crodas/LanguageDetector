@@ -1,0 +1,43 @@
+#!/usr/bin/env php
+<?php
+
+// register the autoloader
+require 'vendor/autoload.php';
+
+// get stdin text
+$text = file_get_contents('php://stdin');
+
+// parse parameters
+$args = CommandLine::parseArgs($_SERVER['argv']);
+
+if (isset($args['help']) || isset($args['?'])) {
+    echo "Usage: cat <text file> | ".$_SERVER['argv'][0]." [options]\n";
+    echo "Options:\n";
+    echo "    --detector, -d <filename>   Sets the language detector script file path. Defaults to 'language.php'\n";
+    echo "    --help, -?                  Print this help\n";
+    exit;
+}
+
+
+$languageScript = 'language.php';
+
+if (isset($args['detector']))   { $languageScript = $args['detector']; }
+if (isset($args['d']))          { $languageScript = $args['d']; }
+
+
+// we load the language model, it would create
+// the $config object for us.
+$detect = LanguageDetector\Detect::initByPath($languageScript);
+
+// get the 5 most probable guesses
+$languages = $detect->detect($text);
+$languages = array_slice($languages, 0, 5);
+
+// print result
+echo "Detected languages:\n";
+
+foreach ($languages as $candidate) {
+    $lang = $candidate['lang'];
+    $score = $candidate['score'] * 100;
+    echo "  $lang:\t".number_format($score, 1)."%\n";
+}

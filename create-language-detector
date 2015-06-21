@@ -8,6 +8,7 @@ require 'vendor/autoload.php';
 // because this process runs once.
 ini_set('memory_limit', '1G');
 
+// parse parameters
 $args = CommandLine::parseArgs($_SERVER['argv']);
 
 $samples = array();
@@ -21,10 +22,11 @@ foreach ($args as $key => $arg) {
     }
 }
 
-if (count($samples) === 0) {
+if (count($samples) === 0 || isset($options['help']) || isset($options['?'])) {
     echo "Usage: ".$_SERVER['argv'][0]." <language sample files> [options]\n";
     echo "Options:\n";
     echo "    --output, -o <filename>    Sets the output script file path. Defaults to 'language.php'\n";
+    echo "    --help, -?                 Print this help\n";
     exit;
 }
 
