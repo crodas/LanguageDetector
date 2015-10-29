@@ -1,5 +1,7 @@
 <?php
 
+ini_set('memory_limit', '1G');
+
 class AssertTest extends \phpunit_framework_testcase
 {
     public static function langProvider()

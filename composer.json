@@ -9,7 +9,8 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "crodas/file-util": ">=v0.1.8"
+        "crodas/file-util": ">=v0.1.8",
+        "crodas/phpcluster": "dev-master"
     },
     "license": "BSD-4-Clause",
     "version": "v0.1.1",
