@@ -8,7 +8,7 @@ It follows the approach described in the [paper](http://scholar.google.com.py/sc
 How it works
 ------------
 
-The first thing we need is a `language model` (which looks like [this file](https://github.com/crodas/LanguageDetector/blob/master/example/datafile.php)) that is used to compare the texts against at classification time. This process must done *before* anything, and it can be generated with an script similar to [this file](https://github.com/crodas/LanguageDetector/blob/master/example/learn.php).
+The first thing we need is a `language model` (which looks like [this file](https://github.com/crodas/LanguageDetector/blob/master/example/datafile.php)) that is used to compare the texts against at classification time. This process must be done *before* anything, and it can be generated with an script similar to [this file](https://github.com/crodas/LanguageDetector/blob/master/example/learn.php).
 
 ```php
 // register the autoloader
