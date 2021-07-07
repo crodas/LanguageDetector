@@ -1,4 +1,4 @@
-LanguageDetector [![Build Status](https://travis-ci.org/crodas/LanguageDetector.png)](https://travis-ci.org/crodas/LanguageDetector) [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=crodas&url=https://github.com/crodas/LanguageDetector&title=Language%20Detector%20Library&language=en&tags=github&category=software)
+LanguageDetector [![Build Status](https://travis-ci.org/crodas/LanguageDetector.png)](https://travis-ci.org/crodas/LanguageDetector) [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=crodas&url=https://github.com/crodas/LanguageDetector&title=Language%20Detector%20Library&language=en&tags=github&category=software) [![Backers on Open Collective](https://opencollective.com/languagedetector/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/languagedetector/sponsors/badge.svg)](#sponsors) 
 ================
 
 PHP Class to detect languages from any free text.
@@ -68,3 +68,33 @@ Algorithms
 The project is designed to work with modules, which means you can provide your own algorithm for `sorting` and `comparing` the N-Grams. By default the library implements the [PageRank](http://en.wikipedia.org/wiki/PageRank) as `sorting` algorithm, and *out of place* (described in the paper) as `comparing`. 
 
 In order to supply your own algorithms, you must change the `$config` at *learning stage* to load your own classes (which by the way should implement some interaces).
+
+## Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="graphs/contributors"><img src="https://opencollective.com/LanguageDetector/contributors.svg?width=890" /></a>
+
+
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/LanguageDetector#backer)]
+
+<a href="https://opencollective.com/LanguageDetector#backers" target="_blank"><img src="https://opencollective.com/LanguageDetector/backers.svg?width=890"></a>
+
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/LanguageDetector#sponsor)]
+
+<a href="https://opencollective.com/LanguageDetector/sponsor/0/website" target="_blank"><img src="https://opencollective.com/LanguageDetector/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/LanguageDetector/sponsor/1/website" target="_blank"><img src="https://opencollective.com/LanguageDetector/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/LanguageDetector/sponsor/2/website" target="_blank"><img src="https://opencollective.com/LanguageDetector/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/LanguageDetector/sponsor/3/website" target="_blank"><img src="https://opencollective.com/LanguageDetector/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/LanguageDetector/sponsor/4/website" target="_blank"><img src="https://opencollective.com/LanguageDetector/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/LanguageDetector/sponsor/5/website" target="_blank"><img src="https://opencollective.com/LanguageDetector/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/LanguageDetector/sponsor/6/website" target="_blank"><img src="https://opencollective.com/LanguageDetector/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/LanguageDetector/sponsor/7/website" target="_blank"><img src="https://opencollective.com/LanguageDetector/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/LanguageDetector/sponsor/8/website" target="_blank"><img src="https://opencollective.com/LanguageDetector/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/LanguageDetector/sponsor/9/website" target="_blank"><img src="https://opencollective.com/LanguageDetector/sponsor/9/avatar.svg"></a>
+
+
