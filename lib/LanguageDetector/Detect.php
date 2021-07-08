@@ -108,8 +108,8 @@ class Detect
     {
         return array_keys($this->data);
     }
-
-    public function detect($text, $limit = 300)
+    
+    public function detectLanguageScores($text, $limit = 300)
     {
         $chunks = $this->parser->splitText($text, $limit);
         $results = array();
@@ -162,6 +162,13 @@ class Detect
         usort($distance, function($a, $b) {
             return $a['score'] > $b['score'] ? -1 : 1;
         });
+        
+        return $distance;
+    }
+
+    public function detect($text, $limit = 300)
+    {
+        $distance = $this->detectLanguageScores($text, $limit);
 
         if ($distance[0]['score'] - $distance[1]['score'] <= $this->threshold) {
             /** We're not sure at all, we return the whole array then */

@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-
+        "pwfisher/command-line-php": "*"
     },
     "minimum-stability": "dev",
     "require-dev": {
@@ -23,5 +23,8 @@
         "psr-0": {
             "LanguageDetector": "lib/"
         }
-    }
+    },
+    "bin": [
+      "create-language-detector"
+    ]
 }
