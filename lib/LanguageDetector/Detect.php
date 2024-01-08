@@ -47,6 +47,8 @@ class Detect
     protected $sort;
     protected $threshold = .02;
 
+    protected $distance;
+
     public function __construct(Config $config, Array $data)
     {
         $this->config = $config;
@@ -55,7 +57,7 @@ class Detect
         $this->sort     = $this->config->getSortObject();
         $this->distance = $this->config->GetDistanceObject();
     }
-    
+
     public static function initByPath($datafile)
     {
         $format = AbstractFormat::initFormatByPath($datafile);
@@ -65,7 +67,7 @@ class Detect
                 throw new \Exception("Invalid data file, missing {$type}");
             }
         }
-        return new self($data['config'], $data['data']);   
+        return new self($data['config'], $data['data']);
     }
 
     public function getKnowledge()
@@ -167,7 +169,7 @@ class Detect
             /** We're not sure at all, we return the whole array then */
             return $distance;
         }
-        
+
         return $distance[0]['lang'];
     }
 }
